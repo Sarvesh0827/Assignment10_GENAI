@@ -1,0 +1,313 @@
+{
+  "rubric": "A chunk is relevant if its document was hand-labeled as the paper that answers the query and the chunk contains the required phrases.",
+  "queries": [
+    {
+      "id": "q1_additive_kernels",
+      "gold_docs": [
+        0
+      ],
+      "keywords": [
+        "learning rate",
+        "kernel",
+        "additive"
+      ],
+      "min_hits": 3,
+      "why": "Document 0 derives those learning rates. A chunk is useful only when it actually discusses learning rates, kernels, and additive models together, not when it is a generic introduction.",
+      "text": "What learning rates are obtained for regularized kernel methods applied to additive models?"
+    },
+    {
+      "id": "q2_leptonic_decay",
+      "gold_docs": [
+        1
+      ],
+      "keywords": [
+        "decay constant",
+        "leptonic"
+      ],
+      "min_hits": 2,
+      "why": "Document 1 extracts a leptonic decay constant from tagged decays. The query does not name CLEO-c. Other papers mention a decay constant in passing, so those chunks are not labeled relevant.",
+      "text": "How is a leptonic decay constant extracted from tagged meson decays?"
+    },
+    {
+      "id": "q3_synaptic_memory",
+      "gold_docs": [
+        7
+      ],
+      "keywords": [
+        "mtj",
+        "plasticity"
+      ],
+      "min_hits": 2,
+      "why": "Document 7's answer is that an MTJ's magnetization dynamics reproduce synaptic plasticity. Background chunks about brain power are not useful even though they come from the same paper.",
+      "text": "How do nanoelectronic synapses store synaptic memory for neuromorphic computing?"
+    },
+    {
+      "id": "q4_od_matrix",
+      "gold_docs": [
+        32
+      ],
+      "keywords": [
+        "od matrix",
+        "origin - destination"
+      ],
+      "min_hits": 1,
+      "why": "Document 32 is the only public-transport origin-destination paper in the subset. The body writes this both as 'od matrix' and as 'origin - destination'. Chunks that mention neither are not an answer.",
+      "text": "How can origin-destination passenger counts be estimated for public transport?"
+    },
+    {
+      "id": "q5_magnetoresistance",
+      "gold_docs": [
+        20
+      ],
+      "keywords": [
+        "magnetoresistance",
+        "surface state",
+        "topological"
+      ],
+      "min_hits": 2,
+      "why": "Document 20 explains linear, non-saturating magnetoresistance on a topological insulator surface. Documents 7 and 42 also mention magnetoresistance, and documents 70 and 71 discuss topological insulators.",
+      "text": "Why does magnetoresistance stay linear instead of saturating on a topological insulator surface?"
+    },
+    {
+      "id": "q6_template_bank",
+      "gold_docs": [
+        27
+      ],
+      "keywords": [
+        "template bank",
+        "gravitational",
+        "merger",
+        "waveform"
+      ],
+      "min_hits": 2,
+      "why": "Document 27 builds a template bank for matched filtering of compact-object mergers. Many other papers mention gravity, so a chunk must be about the template bank or the merger search.",
+      "text": "How are banks of waveform templates used to detect compact-object mergers in gravitational-wave data?"
+    }
+  ],
+  "memory_turns": [
+    {
+      "id": "mem_turn1",
+      "text": "How do magnetic tunnel junctions act as nanoelectronic synapses for neuromorphic memory?",
+      "gold_docs": [
+        7
+      ],
+      "keywords": [
+        "tunnel junction",
+        "synaptic",
+        "neuromorphic",
+        "plasticity"
+      ],
+      "min_hits": 2,
+      "why": "Same paper as q3. Turn 1 names the device so later anaphora has a referent."
+    },
+    {
+      "id": "mem_turn2",
+      "text": "How does the frequency of the input affect it?",
+      "gold_docs": [
+        7
+      ],
+      "keywords": [
+        "potentiation",
+        "plasticity",
+        "tunnel junction",
+        "synaptic",
+        "mtj"
+      ],
+      "require_all": [
+        "frequency"
+      ],
+      "min_hits": 1,
+      "why": "Document 7 argues that stimulus frequency decides whether the junction shows long-term potentiation. Chunks are useful only when they discuss frequency in that synaptic setting."
+    }
+  ],
+  "chunk_ids": {
+    "fixed_window": {
+      "q1_additive_kernels": [
+        "fixed_window-0-0",
+        "fixed_window-0-1",
+        "fixed_window-0-11",
+        "fixed_window-0-26",
+        "fixed_window-0-27",
+        "fixed_window-0-3",
+        "fixed_window-0-34",
+        "fixed_window-0-35",
+        "fixed_window-0-4"
+      ],
+      "q2_leptonic_decay": [
+        "fixed_window-1-0",
+        "fixed_window-1-2",
+        "fixed_window-1-20",
+        "fixed_window-1-3",
+        "fixed_window-1-4"
+      ],
+      "q3_synaptic_memory": [
+        "fixed_window-7-8"
+      ],
+      "q4_od_matrix": [
+        "fixed_window-32-0",
+        "fixed_window-32-2",
+        "fixed_window-32-3",
+        "fixed_window-32-4",
+        "fixed_window-32-40",
+        "fixed_window-32-41",
+        "fixed_window-32-42",
+        "fixed_window-32-43",
+        "fixed_window-32-44",
+        "fixed_window-32-5"
+      ],
+      "q5_magnetoresistance": [
+        "fixed_window-20-2",
+        "fixed_window-20-3",
+        "fixed_window-20-37",
+        "fixed_window-20-4"
+      ],
+      "q6_template_bank": [
+        "fixed_window-27-0",
+        "fixed_window-27-1",
+        "fixed_window-27-17",
+        "fixed_window-27-18",
+        "fixed_window-27-19",
+        "fixed_window-27-2",
+        "fixed_window-27-23",
+        "fixed_window-27-25",
+        "fixed_window-27-26",
+        "fixed_window-27-28",
+        "fixed_window-27-29",
+        "fixed_window-27-31",
+        "fixed_window-27-33",
+        "fixed_window-27-4",
+        "fixed_window-27-40",
+        "fixed_window-27-41",
+        "fixed_window-27-43",
+        "fixed_window-27-44",
+        "fixed_window-27-48",
+        "fixed_window-27-50",
+        "fixed_window-27-6",
+        "fixed_window-27-7"
+      ],
+      "mem_turn1": [
+        "fixed_window-7-18",
+        "fixed_window-7-2",
+        "fixed_window-7-27",
+        "fixed_window-7-3",
+        "fixed_window-7-4",
+        "fixed_window-7-5",
+        "fixed_window-7-7",
+        "fixed_window-7-8"
+      ],
+      "mem_turn2": [
+        "fixed_window-7-16",
+        "fixed_window-7-22",
+        "fixed_window-7-3",
+        "fixed_window-7-4",
+        "fixed_window-7-7"
+      ]
+    },
+    "sentence_packed": {
+      "q1_additive_kernels": [
+        "sentence_packed-0-1",
+        "sentence_packed-0-14",
+        "sentence_packed-0-15",
+        "sentence_packed-0-24",
+        "sentence_packed-0-29",
+        "sentence_packed-0-33",
+        "sentence_packed-0-36",
+        "sentence_packed-0-37",
+        "sentence_packed-0-4",
+        "sentence_packed-0-42",
+        "sentence_packed-0-43",
+        "sentence_packed-0-5",
+        "sentence_packed-0-6"
+      ],
+      "q2_leptonic_decay": [
+        "sentence_packed-1-0",
+        "sentence_packed-1-1",
+        "sentence_packed-1-24",
+        "sentence_packed-1-25",
+        "sentence_packed-1-3",
+        "sentence_packed-1-4",
+        "sentence_packed-1-6"
+      ],
+      "q3_synaptic_memory": [
+        "sentence_packed-7-13",
+        "sentence_packed-7-23",
+        "sentence_packed-7-24"
+      ],
+      "q4_od_matrix": [
+        "sentence_packed-32-0",
+        "sentence_packed-32-2",
+        "sentence_packed-32-3",
+        "sentence_packed-32-47",
+        "sentence_packed-32-48",
+        "sentence_packed-32-49",
+        "sentence_packed-32-5",
+        "sentence_packed-32-50",
+        "sentence_packed-32-51",
+        "sentence_packed-32-6",
+        "sentence_packed-32-7"
+      ],
+      "q5_magnetoresistance": [
+        "sentence_packed-20-2",
+        "sentence_packed-20-3",
+        "sentence_packed-20-4",
+        "sentence_packed-20-49",
+        "sentence_packed-20-5",
+        "sentence_packed-20-50",
+        "sentence_packed-20-51"
+      ],
+      "q6_template_bank": [
+        "sentence_packed-27-0",
+        "sentence_packed-27-1",
+        "sentence_packed-27-2",
+        "sentence_packed-27-21",
+        "sentence_packed-27-22",
+        "sentence_packed-27-23",
+        "sentence_packed-27-24",
+        "sentence_packed-27-29",
+        "sentence_packed-27-3",
+        "sentence_packed-27-30",
+        "sentence_packed-27-32",
+        "sentence_packed-27-33",
+        "sentence_packed-27-35",
+        "sentence_packed-27-36",
+        "sentence_packed-27-37",
+        "sentence_packed-27-39",
+        "sentence_packed-27-4",
+        "sentence_packed-27-42",
+        "sentence_packed-27-49",
+        "sentence_packed-27-5",
+        "sentence_packed-27-50",
+        "sentence_packed-27-53",
+        "sentence_packed-27-54",
+        "sentence_packed-27-55",
+        "sentence_packed-27-6",
+        "sentence_packed-27-60",
+        "sentence_packed-27-61",
+        "sentence_packed-27-63",
+        "sentence_packed-27-8",
+        "sentence_packed-27-9"
+      ],
+      "mem_turn1": [
+        "sentence_packed-7-1",
+        "sentence_packed-7-10",
+        "sentence_packed-7-12",
+        "sentence_packed-7-13",
+        "sentence_packed-7-2",
+        "sentence_packed-7-23",
+        "sentence_packed-7-24",
+        "sentence_packed-7-33",
+        "sentence_packed-7-4",
+        "sentence_packed-7-7",
+        "sentence_packed-7-8",
+        "sentence_packed-7-9"
+      ],
+      "mem_turn2": [
+        "sentence_packed-7-12",
+        "sentence_packed-7-21",
+        "sentence_packed-7-28",
+        "sentence_packed-7-6",
+        "sentence_packed-7-7"
+      ]
+    }
+  }
+}

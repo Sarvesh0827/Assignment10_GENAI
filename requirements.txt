@@ -1,0 +1,6 @@
+datasets==5.1.0
+chromadb==1.5.9
+sentence-transformers==6.2.0
+torch==2.15.0
+numpy==2.4.6
+tqdm==4.70.1

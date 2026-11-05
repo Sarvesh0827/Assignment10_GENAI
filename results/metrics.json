@@ -1,0 +1,2307 @@
+{
+  "corpus": {
+    "dataset": "ccdv/arxiv-summarization",
+    "config": "document",
+    "split": "train[:100]",
+    "n_docs": 100,
+    "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+    "reranker": "cross-encoder/ms-marco-MiniLM-L-6-v2",
+    "vector_db": "chromadb persistent at C:\\Users\\sarvesh\\Downloads\\HW_10_GENAI\\chroma_db",
+    "chunk_size": 800,
+    "chunk_overlap": 120,
+    "candidate_pool": 20,
+    "k": 5,
+    "chunk_stats": {
+      "fixed_window": {
+        "n_chunks": 5203,
+        "avg_chars": 794.2,
+        "min_chars": 180,
+        "max_chars": 800
+      },
+      "sentence_packed": {
+        "n_chunks": 6095,
+        "avg_chars": 702.6,
+        "min_chars": 180,
+        "max_chars": 800
+      }
+    }
+  },
+  "averages": {
+    "fixed_window/vector": {
+      "precision_at_5": 0.6333333333333333,
+      "recall_at_5": 0.5304713804713804,
+      "mrr": 0.8666666666666667,
+      "doc_precision_at_5": 1.0,
+      "doc_recall_at_5": 1.0,
+      "doc_mrr": 1.0
+    },
+    "fixed_window/reranked": {
+      "precision_at_5": 0.7666666666666666,
+      "recall_at_5": 0.6388047138047138,
+      "mrr": 0.8666666666666667,
+      "doc_precision_at_5": 1.0,
+      "doc_recall_at_5": 1.0,
+      "doc_mrr": 1.0
+    },
+    "sentence_packed/vector": {
+      "precision_at_5": 0.7333333333333334,
+      "recall_at_5": 0.3452935952935953,
+      "mrr": 0.8472222222222223,
+      "doc_precision_at_5": 1.0,
+      "doc_recall_at_5": 1.0,
+      "doc_mrr": 1.0
+    },
+    "sentence_packed/reranked": {
+      "precision_at_5": 0.8333333333333334,
+      "recall_at_5": 0.40573315573315577,
+      "mrr": 0.8416666666666667,
+      "doc_precision_at_5": 1.0,
+      "doc_recall_at_5": 1.0,
+      "doc_mrr": 1.0
+    }
+  },
+  "per_query": {
+    "q1_additive_kernels": {
+      "fixed_window": {
+        "query": "What learning rates are obtained for regularized kernel methods applied to additive models?",
+        "vector": {
+          "metrics": {
+            "precision_at_5": 1.0,
+            "recall_at_5": 0.5555555555555556,
+            "mrr": 1.0,
+            "doc_precision_at_5": 1.0,
+            "doc_recall_at_5": 1.0,
+            "doc_mrr": 1.0,
+            "n_relevant_in_index": 9
+          },
+          "top": [
+            {
+              "rank": 1,
+              "id": "fixed_window-0-0",
+              "doc_id": 0,
+              "relevant": true,
+              "vector_distance": 0.1933,
+              "rerank_score": null,
+              "snippet": "additive models [CITE] provide an important family of models for semiparametric regression or classification . some reasons for the success of additive models are their increased flexibility when compared to linear or generalized linear models and their increased interpretability"
+            },
+            {
+              "rank": 2,
+              "id": "fixed_window-0-1",
+              "doc_id": 0,
+              "relevant": true,
+              "vector_distance": 0.2078,
+              "rerank_score": null,
+              "snippet": "many interesting results on learning rates of regularized kernel based models for additive models have been published when the focus is on sparsity and when the classical least squares loss function is used , see e.g. [CITE] , [CITE] , [CITE] , [CITE] , [CITE] , [CITE] and the re"
+            },
+            {
+              "rank": 3,
+              "id": "fixed_window-0-11",
+              "doc_id": 0,
+              "relevant": true,
+              "vector_distance": 0.2777,
+              "rerank_score": null,
+              "snippet": "he [MATH] -metric , it was proved in [CITE] that [MATH] in probability as long as [MATH] satisfies [MATH] and [MATH] . the rest of the paper has the following structure . section [ ratessection ] contains our main results on learning rates for svms based on additive kernels . lea"
+            },
+            {
+              "rank": 4,
+              "id": "fixed_window-0-26",
+              "doc_id": 0,
+              "relevant": true,
+              "vector_distance": 0.2903,
+              "rerank_score": null,
+              "snippet": "the popularity of additive models are flexibility , increased interpretability , and ( often ) a reduced proneness of the curse of high dimensions . hence it is important to check , whether the learning rate given in theorem [ mainratesthm ] under the assumption of an additive mo"
+            },
+            {
+              "rank": 5,
+              "id": "fixed_window-0-4",
+              "doc_id": 0,
+              "relevant": true,
+              "vector_distance": 0.3383,
+              "rerank_score": null,
+              "snippet": "TE] for kernel based quantile regression . we will not address the question how to check whether the assumption of an additive model is satisfied because this would be a topic of a paper of its own . of course , a practical approach might be to fit both models and compare their r"
+            }
+          ]
+        },
+        "reranked": {
+          "metrics": {
+            "precision_at_5": 1.0,
+            "recall_at_5": 0.5555555555555556,
+            "mrr": 1.0,
+            "doc_precision_at_5": 1.0,
+            "doc_recall_at_5": 1.0,
+            "doc_mrr": 1.0,
+            "n_relevant_in_index": 9
+          },
+          "top": [
+            {
+              "rank": 1,
+              "id": "fixed_window-0-1",
+              "doc_id": 0,
+              "relevant": true,
+              "vector_distance": 0.2078,
+              "rerank_score": 5.7514,
+              "snippet": "many interesting results on learning rates of regularized kernel based models for additive models have been published when the focus is on sparsity and when the classical least squares loss function is used , see e.g. [CITE] , [CITE] , [CITE] , [CITE] , [CITE] , [CITE] and the re"
+            },
+            {
+              "rank": 2,
+              "id": "fixed_window-0-0",
+              "doc_id": 0,
+              "relevant": true,
+              "vector_distance": 0.1933,
+              "rerank_score": 4.317,
+              "snippet": "additive models [CITE] provide an important family of models for semiparametric regression or classification . some reasons for the success of additive models are their increased flexibility when compared to linear or generalized linear models and their increased interpretability"
+            },
+            {
+              "rank": 3,
+              "id": "fixed_window-0-3",
+              "doc_id": 0,
+              "relevant": true,
+              "vector_distance": 0.384,
+              "rerank_score": 3.8694,
+              "snippet": "ch methods based on the special hinge loss function and for special kernels only , we refer to [CITE] . in this paper we address the open question , whether an svm with an additive kernel can provide a substantially better learning rate in high dimensions than an svm with a gener"
+            },
+            {
+              "rank": 4,
+              "id": "fixed_window-0-26",
+              "doc_id": 0,
+              "relevant": true,
+              "vector_distance": 0.2903,
+              "rerank_score": 3.7553,
+              "snippet": "the popularity of additive models are flexibility , increased interpretability , and ( often ) a reduced proneness of the curse of high dimensions . hence it is important to check , whether the learning rate given in theorem [ mainratesthm ] under the assumption of an additive mo"
+            },
+            {
+              "rank": 5,
+              "id": "fixed_window-0-11",
+              "doc_id": 0,
+              "relevant": true,
+              "vector_distance": 0.2777,
+              "rerank_score": 3.258,
+              "snippet": "he [MATH] -metric , it was proved in [CITE] that [MATH] in probability as long as [MATH] satisfies [MATH] and [MATH] . the rest of the paper has the following structure . section [ ratessection ] contains our main results on learning rates for svms based on additive kernels . lea"
+            }
+          ]
+        }
+      },
+      "sentence_packed": {
+        "query": "What learning rates are obtained for regularized kernel methods applied to additive models?",
+        "vector": {
+          "metrics": {
+            "precision_at_5": 0.8,
+            "recall_at_5": 0.3076923076923077,
+            "mrr": 1.0,
+            "doc_precision_at_5": 1.0,
+            "doc_recall_at_5": 1.0,
+            "doc_mrr": 1.0,
+            "n_relevant_in_index": 13
+          },
+          "top": [
+            {
+              "rank": 1,
+              "id": "sentence_packed-0-1",
+              "doc_id": 0,
+              "relevant": true,
+              "vector_distance": 0.1397,
+              "rerank_score": null,
+              "snippet": "[CITE] . in the last years many interesting results on learning rates of regularized kernel based models for additive models have been published when the focus is on sparsity and when the classical least squares loss function is used , see e.g. [CITE] , [CITE] , [CITE] , [CITE] ,"
+            },
+            {
+              "rank": 2,
+              "id": "sentence_packed-0-0",
+              "doc_id": 0,
+              "relevant": false,
+              "vector_distance": 0.264,
+              "rerank_score": null,
+              "snippet": "additive models [CITE] provide an important family of models for semiparametric regression or classification . some reasons for the success of additive models are their increased flexibility when compared to linear or generalized linear models and their increased interpretability"
+            },
+            {
+              "rank": 3,
+              "id": "sentence_packed-0-15",
+              "doc_id": 0,
+              "relevant": true,
+              "vector_distance": 0.2857,
+              "rerank_score": null,
+              "snippet": "section [ ratessection ] contains our main results on learning rates for svms based on additive kernels . learning rates for quantile regression are treated as important special cases . section [ comparisonsection ] contains a comparison of our results with other learning rates p"
+            },
+            {
+              "rank": 4,
+              "id": "sentence_packed-0-4",
+              "doc_id": 0,
+              "relevant": true,
+              "vector_distance": 0.2864,
+              "rerank_score": null,
+              "snippet": "such regularized kernel based methods are now often called support vector machines ( svms ) , although the notation was historically used for such methods based on the special hinge loss function and for special kernels only , we refer to [CITE] . in this paper we address the ope"
+            },
+            {
+              "rank": 5,
+              "id": "sentence_packed-0-6",
+              "doc_id": 0,
+              "relevant": true,
+              "vector_distance": 0.3015,
+              "rerank_score": null,
+              "snippet": "consistency of support vector machines generated by additive kernels for additive models was considered in [CITE] . in this paper we establish learning rates for these algorithms . let us recall the framework with a complete separable metric space [MATH] as the input space and a "
+            }
+          ]
+        },
+        "reranked": {
+          "metrics": {
+            "precision_at_5": 1.0,
+            "recall_at_5": 0.38461538461538464,
+            "mrr": 1.0,
+            "doc_precision_at_5": 1.0,
+            "doc_recall_at_5": 1.0,
+            "doc_mrr": 1.0,
+            "n_relevant_in_index": 13
+          },
+          "top": [
+            {
+              "rank": 1,
+              "id": "sentence_packed-0-1",
+              "doc_id": 0,
+              "relevant": true,
+              "vector_distance": 0.1397,
+              "rerank_score": 5.7522,
+              "snippet": "[CITE] . in the last years many interesting results on learning rates of regularized kernel based models for additive models have been published when the focus is on sparsity and when the classical least squares loss function is used , see e.g. [CITE] , [CITE] , [CITE] , [CITE] ,"
+            },
+            {
+              "rank": 2,
+              "id": "sentence_packed-0-4",
+              "doc_id": 0,
+              "relevant": true,
+              "vector_distance": 0.2864,
+              "rerank_score": 5.3393,
+              "snippet": "such regularized kernel based methods are now often called support vector machines ( svms ) , although the notation was historically used for such methods based on the special hinge loss function and for special kernels only , we refer to [CITE] . in this paper we address the ope"
+            },
+            {
+              "rank": 3,
+              "id": "sentence_packed-0-15",
+              "doc_id": 0,
+              "relevant": true,
+              "vector_distance": 0.2857,
+              "rerank_score": 4.5527,
+              "snippet": "section [ ratessection ] contains our main results on learning rates for svms based on additive kernels . learning rates for quantile regression are treated as important special cases . section [ comparisonsection ] contains a comparison of our results with other learning rates p"
+            },
+            {
+              "rank": 4,
+              "id": "sentence_packed-0-33",
+              "doc_id": 0,
+              "relevant": true,
+              "vector_distance": 0.3929,
+              "rerank_score": 3.5572,
+              "snippet": "in other words , we need to demonstrate that the main goal of this paper is achieved by theorem [ quantilethm ] and theorem [ mainratesthm ] , i.e. that an svm based on an additive kernel can provide a substantially better learning rate in high dimensions than an svm with a gener"
+            },
+            {
+              "rank": 5,
+              "id": "sentence_packed-0-6",
+              "doc_id": 0,
+              "relevant": true,
+              "vector_distance": 0.3015,
+              "rerank_score": 3.4901,
+              "snippet": "consistency of support vector machines generated by additive kernels for additive models was considered in [CITE] . in this paper we establish learning rates for these algorithms . let us recall the framework with a complete separable metric space [MATH] as the input space and a "
+            }
+          ]
+        }
+      }
+    },
+    "q2_leptonic_decay": {
+      "fixed_window": {
+        "query": "How is a leptonic decay constant extracted from tagged meson decays?",
+        "vector": {
+          "metrics": {
+            "precision_at_5": 0.6,
+            "recall_at_5": 0.6,
+            "mrr": 1.0,
+            "doc_precision_at_5": 1.0,
+            "doc_recall_at_5": 1.0,
+            "doc_mrr": 1.0,
+            "n_relevant_in_index": 5
+          },
+          "top": [
+            {
+              "rank": 1,
+              "id": "fixed_window-1-0",
+              "doc_id": 1,
+              "relevant": true,
+              "vector_distance": 0.2529,
+              "rerank_score": null,
+              "snippet": "the leptonic decays of a charged pseudoscalar meson [MATH] are processes of the type [MATH] , where [MATH] , [MATH] , or [MATH] . because no strong interactions are present in the leptonic final state [MATH] , such decays provide a clean way to probe the complex , strong interact"
+            },
+            {
+              "rank": 2,
+              "id": "fixed_window-1-2",
+              "doc_id": 1,
+              "relevant": true,
+              "vector_distance": 0.3285,
+              "rerank_score": null,
+              "snippet": "st reliable way to calculate the quantity . knowledge of decay constants is important for describing several key processes , such as [MATH] mixing , which depends on [MATH] , a quantity that is also predicted by lqcd calculations . experimental determination [CITE] of [MATH] with"
+            },
+            {
+              "rank": 3,
+              "id": "fixed_window-1-20",
+              "doc_id": 1,
+              "relevant": true,
+              "vector_distance": 0.3536,
+              "rerank_score": null,
+              "snippet": "ersedes our previous measurement [CITE] of the same branching fraction , which used a subsample of data used in this work . the decay constant [MATH] can be computed using eq . ( [ eq : f ] ) with known values [CITE] [MATH] gev [MATH] , [MATH] mev , [MATH] mev , and [MATH] s. we "
+            },
+            {
+              "rank": 4,
+              "id": "fixed_window-1-1",
+              "doc_id": 1,
+              "relevant": false,
+              "vector_distance": 0.3718,
+              "rerank_score": null,
+              "snippet": "constant , [MATH] is the cabibbo - kobayashi - maskawa ( ckm ) matrix [CITE] element , [MATH] is the mass of the meson , and [MATH] is the mass of the charged lepton . the quantity [MATH] describes the amplitude for the [MATH] and [MATH] -quarks within the [MATH] to have zero sep"
+            },
+            {
+              "rank": 5,
+              "id": "fixed_window-1-8",
+              "doc_id": 1,
+              "relevant": false,
+              "vector_distance": 0.3985,
+              "rerank_score": null,
+              "snippet": ", tuned with much improved knowledge of charm decays [CITE] , and final - state radiation ( fsr ) is modeled by the photos [CITE] program . the modeling of initial - state radiation ( isr ) is based on cross sections for [MATH] production at lower energies obtained from the cleo "
+            }
+          ]
+        },
+        "reranked": {
+          "metrics": {
+            "precision_at_5": 0.8,
+            "recall_at_5": 0.8,
+            "mrr": 1.0,
+            "doc_precision_at_5": 1.0,
+            "doc_recall_at_5": 1.0,
+            "doc_mrr": 1.0,
+            "n_relevant_in_index": 5
+          },
+          "top": [
+            {
+              "rank": 1,
+              "id": "fixed_window-1-3",
+              "doc_id": 1,
+              "relevant": true,
+              "vector_distance": 0.4,
+              "rerank_score": 3.2997,
+              "snippet": "[MATH] . thus , the decay constants [MATH] and [MATH] determined from charm meson decays can be used to test and validate the necessary lqcd calculations applicable to the [MATH] -meson sector . among the leptonic decays in the charm - quark sector , [MATH] decays are more access"
+            },
+            {
+              "rank": 2,
+              "id": "fixed_window-1-0",
+              "doc_id": 1,
+              "relevant": true,
+              "vector_distance": 0.2529,
+              "rerank_score": 3.2917,
+              "snippet": "the leptonic decays of a charged pseudoscalar meson [MATH] are processes of the type [MATH] , where [MATH] , [MATH] , or [MATH] . because no strong interactions are present in the leptonic final state [MATH] , such decays provide a clean way to probe the complex , strong interact"
+            },
+            {
+              "rank": 3,
+              "id": "fixed_window-1-2",
+              "doc_id": 1,
+              "relevant": true,
+              "vector_distance": 0.3285,
+              "rerank_score": 1.1281,
+              "snippet": "st reliable way to calculate the quantity . knowledge of decay constants is important for describing several key processes , such as [MATH] mixing , which depends on [MATH] , a quantity that is also predicted by lqcd calculations . experimental determination [CITE] of [MATH] with"
+            },
+            {
+              "rank": 4,
+              "id": "fixed_window-1-1",
+              "doc_id": 1,
+              "relevant": false,
+              "vector_distance": 0.3718,
+              "rerank_score": 0.7624,
+              "snippet": "constant , [MATH] is the cabibbo - kobayashi - maskawa ( ckm ) matrix [CITE] element , [MATH] is the mass of the meson , and [MATH] is the mass of the charged lepton . the quantity [MATH] describes the amplitude for the [MATH] and [MATH] -quarks within the [MATH] to have zero sep"
+            },
+            {
+              "rank": 5,
+              "id": "fixed_window-1-20",
+              "doc_id": 1,
+              "relevant": true,
+              "vector_distance": 0.3536,
+              "rerank_score": 0.6311,
+              "snippet": "ersedes our previous measurement [CITE] of the same branching fraction , which used a subsample of data used in this work . the decay constant [MATH] can be computed using eq . ( [ eq : f ] ) with known values [CITE] [MATH] gev [MATH] , [MATH] mev , [MATH] mev , and [MATH] s. we "
+            }
+          ]
+        }
+      },
+      "sentence_packed": {
+        "query": "How is a leptonic decay constant extracted from tagged meson decays?",
+        "vector": {
+          "metrics": {
+            "precision_at_5": 0.8,
+            "recall_at_5": 0.5714285714285714,
+            "mrr": 1.0,
+            "doc_precision_at_5": 1.0,
+            "doc_recall_at_5": 1.0,
+            "doc_mrr": 1.0,
+            "n_relevant_in_index": 7
+          },
+          "top": [
+            {
+              "rank": 1,
+              "id": "sentence_packed-1-1",
+              "doc_id": 1,
+              "relevant": true,
+              "vector_distance": 0.2999,
+              "rerank_score": null,
+              "snippet": "in these decays , strong interaction effects can be parametrized by a single quantity , [MATH] , the pseudoscalar meson decay constant . the leptonic decay rate can be measured by experiment , and the decay constant can be determined by the equation ( ignoring radiative correctio"
+            },
+            {
+              "rank": 2,
+              "id": "sentence_packed-1-24",
+              "doc_id": 1,
+              "relevant": true,
+              "vector_distance": 0.3044,
+              "rerank_score": null,
+              "snippet": "in summary , using the sample of [MATH] tagged [MATH] decays with the cleo - c detector we obtain the absolute branching fraction of the leptonic decay [MATH] through [MATH] [MATH] where the first uncertainty is statistical and the second is systematic . this result supersedes ou"
+            },
+            {
+              "rank": 3,
+              "id": "sentence_packed-1-0",
+              "doc_id": 1,
+              "relevant": true,
+              "vector_distance": 0.3176,
+              "rerank_score": null,
+              "snippet": "the leptonic decays of a charged pseudoscalar meson [MATH] are processes of the type [MATH] , where [MATH] , [MATH] , or [MATH] . because no strong interactions are present in the leptonic final state [MATH] , such decays provide a clean way to probe the complex , strong interact"
+            },
+            {
+              "rank": 4,
+              "id": "sentence_packed-1-3",
+              "doc_id": 1,
+              "relevant": true,
+              "vector_distance": 0.3282,
+              "rerank_score": null,
+              "snippet": "knowledge of decay constants is important for describing several key processes , such as [MATH] mixing , which depends on [MATH] , a quantity that is also predicted by lqcd calculations . experimental determination [CITE] of [MATH] with the leptonic decay of a [MATH] meson is , h"
+            },
+            {
+              "rank": 5,
+              "id": "sentence_packed-1-13",
+              "doc_id": 1,
+              "relevant": false,
+              "vector_distance": 0.3997,
+              "rerank_score": null,
+              "snippet": "because of the large solid angle acceptance with high segmentation of the cleo - c detector and the low multiplicity of the events with which we are concerned , [MATH] , where [MATH] is the leptonic decay efficiency . hence , the ratio [MATH] is insensitive to most systematic eff"
+            }
+          ]
+        },
+        "reranked": {
+          "metrics": {
+            "precision_at_5": 1.0,
+            "recall_at_5": 0.7142857142857143,
+            "mrr": 1.0,
+            "doc_precision_at_5": 1.0,
+            "doc_recall_at_5": 1.0,
+            "doc_mrr": 1.0,
+            "n_relevant_in_index": 7
+          },
+          "top": [
+            {
+              "rank": 1,
+              "id": "sentence_packed-1-24",
+              "doc_id": 1,
+              "relevant": true,
+              "vector_distance": 0.3044,
+              "rerank_score": 4.6029,
+              "snippet": "in summary , using the sample of [MATH] tagged [MATH] decays with the cleo - c detector we obtain the absolute branching fraction of the leptonic decay [MATH] through [MATH] [MATH] where the first uncertainty is statistical and the second is systematic . this result supersedes ou"
+            },
+            {
+              "rank": 2,
+              "id": "sentence_packed-1-0",
+              "doc_id": 1,
+              "relevant": true,
+              "vector_distance": 0.3176,
+              "rerank_score": 3.1653,
+              "snippet": "the leptonic decays of a charged pseudoscalar meson [MATH] are processes of the type [MATH] , where [MATH] , [MATH] , or [MATH] . because no strong interactions are present in the leptonic final state [MATH] , such decays provide a clean way to probe the complex , strong interact"
+            },
+            {
+              "rank": 3,
+              "id": "sentence_packed-1-4",
+              "doc_id": 1,
+              "relevant": true,
+              "vector_distance": 0.4342,
+              "rerank_score": 3.0224,
+              "snippet": "_ , [MATH] and [MATH] are much larger than [MATH] . thus , the decay constants [MATH] and [MATH] determined from charm meson decays can be used to test and validate the necessary lqcd calculations applicable to the [MATH] -meson sector . among the leptonic decays in the charm - q"
+            },
+            {
+              "rank": 4,
+              "id": "sentence_packed-1-1",
+              "doc_id": 1,
+              "relevant": true,
+              "vector_distance": 0.2999,
+              "rerank_score": 2.7549,
+              "snippet": "in these decays , strong interaction effects can be parametrized by a single quantity , [MATH] , the pseudoscalar meson decay constant . the leptonic decay rate can be measured by experiment , and the decay constant can be determined by the equation ( ignoring radiative correctio"
+            },
+            {
+              "rank": 5,
+              "id": "sentence_packed-1-3",
+              "doc_id": 1,
+              "relevant": true,
+              "vector_distance": 0.3282,
+              "rerank_score": 1.174,
+              "snippet": "knowledge of decay constants is important for describing several key processes , such as [MATH] mixing , which depends on [MATH] , a quantity that is also predicted by lqcd calculations . experimental determination [CITE] of [MATH] with the leptonic decay of a [MATH] meson is , h"
+            }
+          ]
+        }
+      }
+    },
+    "q3_synaptic_memory": {
+      "fixed_window": {
+        "query": "How do nanoelectronic synapses store synaptic memory for neuromorphic computing?",
+        "vector": {
+          "metrics": {
+            "precision_at_5": 0.2,
+            "recall_at_5": 1.0,
+            "mrr": 0.2,
+            "doc_precision_at_5": 1.0,
+            "doc_recall_at_5": 1.0,
+            "doc_mrr": 1.0,
+            "n_relevant_in_index": 1
+          },
+          "top": [
+            {
+              "rank": 1,
+              "id": "fixed_window-7-2",
+              "doc_id": 7,
+              "relevant": false,
+              "vector_distance": 0.3072,
+              "rerank_score": null,
+              "snippet": "upercomputer where the power consumption was reported to be of the order of a few [MATH] [CITE] . while the power required to simulate the human brain will rise significantly as we proceed along the hierarchy in the animal kingdom , actual power consumption in the mammalian brain"
+            },
+            {
+              "rank": 2,
+              "id": "fixed_window-7-7",
+              "doc_id": 7,
+              "relevant": false,
+              "vector_distance": 0.3463,
+              "rerank_score": null,
+              "snippet": "erm memory ( ltm ) models proposed by atkinson and shiffrin [CITE] ( fig . [ drawing1](b ) ) . this psychological model partitions the human memory into an stm and an ltm . on the arrival of an input stimulus , information is first stored in the stm . however , upon frequent rehe"
+            },
+            {
+              "rank": 3,
+              "id": "fixed_window-7-4",
+              "doc_id": 7,
+              "relevant": false,
+              "vector_distance": 0.3528,
+              "rerank_score": null,
+              "snippet": "ased on the frequency of the incoming action potentials . such volatile or meta - stable synaptic plasticity mechanisms can lead to neuromorphic architectures where the synaptic memory can adapt itself to a changing environment since sections of the memory that have been not rece"
+            },
+            {
+              "rank": 4,
+              "id": "fixed_window-7-3",
+              "doc_id": 7,
+              "relevant": false,
+              "vector_distance": 0.3586,
+              "rerank_score": null,
+              "snippet": "asurements observed in biological synapses in nanoelectronic devices like phase change memories [CITE] , [MATH] memristors [CITE] and spintronic devices [CITE] , etc . however , majority of the research have focused on non - volatile plasticity changes of the synapse in response "
+            },
+            {
+              "rank": 5,
+              "id": "fixed_window-7-8",
+              "doc_id": 7,
+              "relevant": true,
+              "vector_distance": 0.3769,
+              "rerank_score": null,
+              "snippet": "ransition to a long - term stable resistance state on frequent stimulations . hence a competition between synaptic memory reinforcement or strengthening and memory loss is a crucial requirement for such nanoelectronic synapses . in the next section , we will describe the mapping "
+            }
+          ]
+        },
+        "reranked": {
+          "metrics": {
+            "precision_at_5": 0.2,
+            "recall_at_5": 1.0,
+            "mrr": 0.2,
+            "doc_precision_at_5": 1.0,
+            "doc_recall_at_5": 1.0,
+            "doc_mrr": 1.0,
+            "n_relevant_in_index": 1
+          },
+          "top": [
+            {
+              "rank": 1,
+              "id": "fixed_window-7-2",
+              "doc_id": 7,
+              "relevant": false,
+              "vector_distance": 0.3072,
+              "rerank_score": 2.1135,
+              "snippet": "upercomputer where the power consumption was reported to be of the order of a few [MATH] [CITE] . while the power required to simulate the human brain will rise significantly as we proceed along the hierarchy in the animal kingdom , actual power consumption in the mammalian brain"
+            },
+            {
+              "rank": 2,
+              "id": "fixed_window-7-4",
+              "doc_id": 7,
+              "relevant": false,
+              "vector_distance": 0.3528,
+              "rerank_score": 0.323,
+              "snippet": "ased on the frequency of the incoming action potentials . such volatile or meta - stable synaptic plasticity mechanisms can lead to neuromorphic architectures where the synaptic memory can adapt itself to a changing environment since sections of the memory that have been not rece"
+            },
+            {
+              "rank": 3,
+              "id": "fixed_window-7-3",
+              "doc_id": 7,
+              "relevant": false,
+              "vector_distance": 0.3586,
+              "rerank_score": -0.245,
+              "snippet": "asurements observed in biological synapses in nanoelectronic devices like phase change memories [CITE] , [MATH] memristors [CITE] and spintronic devices [CITE] , etc . however , majority of the research have focused on non - volatile plasticity changes of the synapse in response "
+            },
+            {
+              "rank": 4,
+              "id": "fixed_window-7-7",
+              "doc_id": 7,
+              "relevant": false,
+              "vector_distance": 0.3463,
+              "rerank_score": -0.4705,
+              "snippet": "erm memory ( ltm ) models proposed by atkinson and shiffrin [CITE] ( fig . [ drawing1](b ) ) . this psychological model partitions the human memory into an stm and an ltm . on the arrival of an input stimulus , information is first stored in the stm . however , upon frequent rehe"
+            },
+            {
+              "rank": 5,
+              "id": "fixed_window-7-8",
+              "doc_id": 7,
+              "relevant": true,
+              "vector_distance": 0.3769,
+              "rerank_score": -0.8657,
+              "snippet": "ransition to a long - term stable resistance state on frequent stimulations . hence a competition between synaptic memory reinforcement or strengthening and memory loss is a crucial requirement for such nanoelectronic synapses . in the next section , we will describe the mapping "
+            }
+          ]
+        }
+      },
+      "sentence_packed": {
+        "query": "How do nanoelectronic synapses store synaptic memory for neuromorphic computing?",
+        "vector": {
+          "metrics": {
+            "precision_at_5": 0.0,
+            "recall_at_5": 0.0,
+            "mrr": 0.08333333333333333,
+            "doc_precision_at_5": 1.0,
+            "doc_recall_at_5": 1.0,
+            "doc_mrr": 1.0,
+            "n_relevant_in_index": 3
+          },
+          "top": [
+            {
+              "rank": 1,
+              "id": "sentence_packed-7-4",
+              "doc_id": 7,
+              "relevant": false,
+              "vector_distance": 0.2873,
+              "rerank_score": null,
+              "snippet": "while the power required to simulate the human brain will rise significantly as we proceed along the hierarchy in the animal kingdom , actual power consumption in the mammalian brain is just a few tens of watts . in a neuromorphic computing platform , synapses form the pathways b"
+            },
+            {
+              "rank": 2,
+              "id": "sentence_packed-7-1",
+              "doc_id": 7,
+              "relevant": false,
+              "vector_distance": 0.3087,
+              "rerank_score": null,
+              "snippet": "the [MATH] [CITE] , [MATH] [CITE] and the ibm [MATH] [CITE] are instances of recent flagship neuromorphic projects that aim to develop brain - inspired computing platforms suitable for recognition ( image , video , speech ) , classification and mining problems . while boolean com"
+            },
+            {
+              "rank": 3,
+              "id": "sentence_packed-7-8",
+              "doc_id": 7,
+              "relevant": false,
+              "vector_distance": 0.3289,
+              "rerank_score": null,
+              "snippet": "such volatile or meta - stable synaptic plasticity mechanisms can lead to neuromorphic architectures where the synaptic memory can adapt itself to a changing environment since sections of the memory that have been not receiving frequent stimulus can be now erased and utilized to "
+            },
+            {
+              "rank": 4,
+              "id": "sentence_packed-7-5",
+              "doc_id": 7,
+              "relevant": false,
+              "vector_distance": 0.3312,
+              "rerank_score": null,
+              "snippet": "meanwhile , researchers have attempted to mimic several plasticity measurements observed in biological synapses in nanoelectronic devices like phase change memories [CITE] , [MATH] memristors [CITE] and spintronic devices [CITE] , etc . however , majority of the research have foc"
+            },
+            {
+              "rank": 5,
+              "id": "sentence_packed-7-2",
+              "doc_id": 7,
+              "relevant": false,
+              "vector_distance": 0.3404,
+              "rerank_score": null,
+              "snippet": "while boolean computation is based on the sequential fetch , decode and execute cycles , such neuromorphic computing architectures are massively parallel and event - driven and are potentially appealing for pattern recognition tasks and cortical brain simulations to that end , re"
+            }
+          ]
+        },
+        "reranked": {
+          "metrics": {
+            "precision_at_5": 0.0,
+            "recall_at_5": 0.0,
+            "mrr": 0.05,
+            "doc_precision_at_5": 1.0,
+            "doc_recall_at_5": 1.0,
+            "doc_mrr": 1.0,
+            "n_relevant_in_index": 3
+          },
+          "top": [
+            {
+              "rank": 1,
+              "id": "sentence_packed-7-4",
+              "doc_id": 7,
+              "relevant": false,
+              "vector_distance": 0.2873,
+              "rerank_score": 3.9448,
+              "snippet": "while the power required to simulate the human brain will rise significantly as we proceed along the hierarchy in the animal kingdom , actual power consumption in the mammalian brain is just a few tens of watts . in a neuromorphic computing platform , synapses form the pathways b"
+            },
+            {
+              "rank": 2,
+              "id": "sentence_packed-7-2",
+              "doc_id": 7,
+              "relevant": false,
+              "vector_distance": 0.3404,
+              "rerank_score": 2.7609,
+              "snippet": "while boolean computation is based on the sequential fetch , decode and execute cycles , such neuromorphic computing architectures are massively parallel and event - driven and are potentially appealing for pattern recognition tasks and cortical brain simulations to that end , re"
+            },
+            {
+              "rank": 3,
+              "id": "sentence_packed-7-8",
+              "doc_id": 7,
+              "relevant": false,
+              "vector_distance": 0.3289,
+              "rerank_score": 1.1398,
+              "snippet": "such volatile or meta - stable synaptic plasticity mechanisms can lead to neuromorphic architectures where the synaptic memory can adapt itself to a changing environment since sections of the memory that have been not receiving frequent stimulus can be now erased and utilized to "
+            },
+            {
+              "rank": 4,
+              "id": "sentence_packed-7-12",
+              "doc_id": 7,
+              "relevant": false,
+              "vector_distance": 0.3885,
+              "rerank_score": 0.6345,
+              "snippet": "while the `` forgetting '' phenomena occurs at a fast rate in the stm , information can be stored for a much longer duration in the ltm . in order to mimic such volatile synaptic plasticity mechanisms , a nanoelectronic device is required that is able to undergo meta - stable res"
+            },
+            {
+              "rank": 5,
+              "id": "sentence_packed-7-1",
+              "doc_id": 7,
+              "relevant": false,
+              "vector_distance": 0.3087,
+              "rerank_score": 0.3095,
+              "snippet": "the [MATH] [CITE] , [MATH] [CITE] and the ibm [MATH] [CITE] are instances of recent flagship neuromorphic projects that aim to develop brain - inspired computing platforms suitable for recognition ( image , video , speech ) , classification and mining problems . while boolean com"
+            }
+          ]
+        }
+      }
+    },
+    "q4_od_matrix": {
+      "fixed_window": {
+        "query": "How can origin-destination passenger counts be estimated for public transport?",
+        "vector": {
+          "metrics": {
+            "precision_at_5": 0.6,
+            "recall_at_5": 0.3,
+            "mrr": 1.0,
+            "doc_precision_at_5": 1.0,
+            "doc_recall_at_5": 1.0,
+            "doc_mrr": 1.0,
+            "n_relevant_in_index": 10
+          },
+          "top": [
+            {
+              "rank": 1,
+              "id": "fixed_window-32-5",
+              "doc_id": 32,
+              "relevant": true,
+              "vector_distance": 0.3241,
+              "rerank_score": null,
+              "snippet": "an a priori estimate of the od matrix , and they used this prior in coordination with the partial observations of the network flows to derive a generalized least square estimator of the od matrix . despite its novelty , this article assume that the behaviour of car - user and pub"
+            },
+            {
+              "rank": 2,
+              "id": "fixed_window-32-6",
+              "doc_id": 32,
+              "relevant": false,
+              "vector_distance": 0.3487,
+              "rerank_score": null,
+              "snippet": "ination matrix based on the ticket records available for the transport network and/or on previous surveys . unlike the article from bierliaire [CITE] , we use survey data collection from public transport users , and estimate the approximate whole matrix structure through the esti"
+            },
+            {
+              "rank": 3,
+              "id": "fixed_window-32-0",
+              "doc_id": 32,
+              "relevant": true,
+              "vector_distance": 0.3824,
+              "rerank_score": null,
+              "snippet": "the origin - destination ( od ) matrix is important in transportation analysis . the matrix contains information on the number of travellers that commute or the amount of freight shipped between different zones of a region . the od matrix is difficult and often costly to obtain b"
+            },
+            {
+              "rank": 4,
+              "id": "fixed_window-32-2",
+              "doc_id": 32,
+              "relevant": true,
+              "vector_distance": 0.383,
+              "rerank_score": null,
+              "snippet": "umber of passenger on each train between each station can not be deduced easily given their current passenger flow data collection processes . + + various approaches to estimating the od matrix using traffic counts have been developed and tested [CITE] using traffic counts , or r"
+            },
+            {
+              "rank": 5,
+              "id": "fixed_window-32-13",
+              "doc_id": 32,
+              "relevant": false,
+              "vector_distance": 0.3982,
+              "rerank_score": null,
+              "snippet": "fitting model based on reasonable assumptions . sections [ mam - gm ] , [ mam - cm ] , [ mam - da ] and [ mam - rm ] presents these assumptions for each parameter in our model . recall that [MATH] is a matrix of count , the main assumption on that matrix is that the number of pas"
+            }
+          ]
+        },
+        "reranked": {
+          "metrics": {
+            "precision_at_5": 1.0,
+            "recall_at_5": 0.5,
+            "mrr": 1.0,
+            "doc_precision_at_5": 1.0,
+            "doc_recall_at_5": 1.0,
+            "doc_mrr": 1.0,
+            "n_relevant_in_index": 10
+          },
+          "top": [
+            {
+              "rank": 1,
+              "id": "fixed_window-32-0",
+              "doc_id": 32,
+              "relevant": true,
+              "vector_distance": 0.3824,
+              "rerank_score": 6.2311,
+              "snippet": "the origin - destination ( od ) matrix is important in transportation analysis . the matrix contains information on the number of travellers that commute or the amount of freight shipped between different zones of a region . the od matrix is difficult and often costly to obtain b"
+            },
+            {
+              "rank": 2,
+              "id": "fixed_window-32-5",
+              "doc_id": 32,
+              "relevant": true,
+              "vector_distance": 0.3241,
+              "rerank_score": 2.443,
+              "snippet": "an a priori estimate of the od matrix , and they used this prior in coordination with the partial observations of the network flows to derive a generalized least square estimator of the od matrix . despite its novelty , this article assume that the behaviour of car - user and pub"
+            },
+            {
+              "rank": 3,
+              "id": "fixed_window-32-42",
+              "doc_id": 32,
+              "relevant": true,
+              "vector_distance": 0.4404,
+              "rerank_score": 2.3269,
+              "snippet": ". this being done , we can provide a new origin - destination matrix . it is plotted in fig . [ fig : jw2006 ] . + this od matrix is then supposed to have the same structure as the regular od of the barrier counts . therefore , we will apply the methodology presented in section ["
+            },
+            {
+              "rank": 4,
+              "id": "fixed_window-32-4",
+              "doc_id": 32,
+              "relevant": true,
+              "vector_distance": 0.4677,
+              "rerank_score": 1.9953,
+              "snippet": "s to use a wireless detection of the passengers trips , and lundgren and peterson s model [CITE] is based on a target od - matrix previously defined . however , none of the cited work considered using survey data . indeed , if no complete information is available about the passen"
+            },
+            {
+              "rank": 5,
+              "id": "fixed_window-32-41",
+              "doc_id": 32,
+              "relevant": true,
+              "vector_distance": 0.4355,
+              "rerank_score": -0.4374,
+              "snippet": "nt survey from the same institute , which aimed at understanding the preferred mean of transport for people going to work . from this database , we only kept those who declared taking the ferry . + before we could provide an analysis of these data , we had to consider that the or"
+            }
+          ]
+        }
+      },
+      "sentence_packed": {
+        "query": "How can origin-destination passenger counts be estimated for public transport?",
+        "vector": {
+          "metrics": {
+            "precision_at_5": 1.0,
+            "recall_at_5": 0.45454545454545453,
+            "mrr": 1.0,
+            "doc_precision_at_5": 1.0,
+            "doc_recall_at_5": 1.0,
+            "doc_mrr": 1.0,
+            "n_relevant_in_index": 11
+          },
+          "top": [
+            {
+              "rank": 1,
+              "id": "sentence_packed-32-7",
+              "doc_id": 32,
+              "relevant": true,
+              "vector_distance": 0.319,
+              "rerank_score": null,
+              "snippet": "moreover , they just use the partial structure extracted from the surveys . + the purpose of this paper is then to develop an estimation procedure for the origin - destination matrix based on the ticket records available for the transport network and/or on previous surveys . unli"
+            },
+            {
+              "rank": 2,
+              "id": "sentence_packed-32-0",
+              "doc_id": 32,
+              "relevant": true,
+              "vector_distance": 0.3408,
+              "rerank_score": null,
+              "snippet": "the origin - destination ( od ) matrix is important in transportation analysis . the matrix contains information on the number of travellers that commute or the amount of freight shipped between different zones of a region . the od matrix is difficult and often costly to obtain b"
+            },
+            {
+              "rank": 3,
+              "id": "sentence_packed-32-2",
+              "doc_id": 32,
+              "relevant": true,
+              "vector_distance": 0.3505,
+              "rerank_score": null,
+              "snippet": "+ + an ideal optimization of the schedule would consider the resources in trains , drivers , stations and passengers . while the primary informations ( trains , drivers , stations ) are known to cityrail and co , the number of passenger on each train between each station can not "
+            },
+            {
+              "rank": 4,
+              "id": "sentence_packed-32-3",
+              "doc_id": 32,
+              "relevant": true,
+              "vector_distance": 0.3636,
+              "rerank_score": null,
+              "snippet": "most of the papers in the literature solve this problem by postulating a general model for the trip distribution , for example a gravity type model [CITE] , which aims at introducing a prior knowledge on the traffic flows and assigning a cost to each journey . then the inference "
+            },
+            {
+              "rank": 5,
+              "id": "sentence_packed-32-48",
+              "doc_id": 32,
+              "relevant": true,
+              "vector_distance": 0.374,
+              "rerank_score": null,
+              "snippet": "then , to provide an estimation , we use a different survey from the same institute , which aimed at understanding the preferred mean of transport for people going to work . from this database , we only kept those who declared taking the ferry . + before we could provide an analy"
+            }
+          ]
+        },
+        "reranked": {
+          "metrics": {
+            "precision_at_5": 1.0,
+            "recall_at_5": 0.45454545454545453,
+            "mrr": 1.0,
+            "doc_precision_at_5": 1.0,
+            "doc_recall_at_5": 1.0,
+            "doc_mrr": 1.0,
+            "n_relevant_in_index": 11
+          },
+          "top": [
+            {
+              "rank": 1,
+              "id": "sentence_packed-32-0",
+              "doc_id": 32,
+              "relevant": true,
+              "vector_distance": 0.3408,
+              "rerank_score": 6.2869,
+              "snippet": "the origin - destination ( od ) matrix is important in transportation analysis . the matrix contains information on the number of travellers that commute or the amount of freight shipped between different zones of a region . the od matrix is difficult and often costly to obtain b"
+            },
+            {
+              "rank": 2,
+              "id": "sentence_packed-32-7",
+              "doc_id": 32,
+              "relevant": true,
+              "vector_distance": 0.319,
+              "rerank_score": 3.9297,
+              "snippet": "moreover , they just use the partial structure extracted from the surveys . + the purpose of this paper is then to develop an estimation procedure for the origin - destination matrix based on the ticket records available for the transport network and/or on previous surveys . unli"
+            },
+            {
+              "rank": 3,
+              "id": "sentence_packed-32-5",
+              "doc_id": 32,
+              "relevant": true,
+              "vector_distance": 0.4096,
+              "rerank_score": 2.2041,
+              "snippet": "however , none of the cited work considered using survey data . indeed , if no complete information is available about the passengers destinations , the simplest solution is to use an appropriate survey to estimate destination information . furthermore , what characteristics of t"
+            },
+            {
+              "rank": 4,
+              "id": "sentence_packed-32-49",
+              "doc_id": 32,
+              "relevant": true,
+              "vector_distance": 0.4585,
+              "rerank_score": 2.1436,
+              "snippet": "this being done , we can provide a new origin - destination matrix . it is plotted in fig . [ fig : jw2006 ] . + this od matrix is then supposed to have the same structure as the regular od of the barrier counts . therefore , we will apply the methodology presented in section [ s"
+            },
+            {
+              "rank": 5,
+              "id": "sentence_packed-32-48",
+              "doc_id": 32,
+              "relevant": true,
+              "vector_distance": 0.374,
+              "rerank_score": 1.5255,
+              "snippet": "then , to provide an estimation , we use a different survey from the same institute , which aimed at understanding the preferred mean of transport for people going to work . from this database , we only kept those who declared taking the ferry . + before we could provide an analy"
+            }
+          ]
+        }
+      }
+    },
+    "q5_magnetoresistance": {
+      "fixed_window": {
+        "query": "Why does magnetoresistance stay linear instead of saturating on a topological insulator surface?",
+        "vector": {
+          "metrics": {
+            "precision_at_5": 0.4,
+            "recall_at_5": 0.5,
+            "mrr": 1.0,
+            "doc_precision_at_5": 1.0,
+            "doc_recall_at_5": 1.0,
+            "doc_mrr": 1.0,
+            "n_relevant_in_index": 4
+          },
+          "top": [
+            {
+              "rank": 1,
+              "id": "fixed_window-20-4",
+              "doc_id": 20,
+              "relevant": true,
+              "vector_distance": 0.3243,
+              "rerank_score": null,
+              "snippet": "netotransport in it . we find that a positive , nonsaturating and dominantly linear magnetoresistance can appear within quite wide magnetic - field range in the ti surface state having a positive and finite effective g - factor . this linear magnetoresistance shows up in the syst"
+            },
+            {
+              "rank": 2,
+              "id": "fixed_window-20-27",
+              "doc_id": 20,
+              "relevant": false,
+              "vector_distance": 0.3883,
+              "rerank_score": null,
+              "snippet": "the following we will give more detailed examination on the linearly increasing magnetoresistance in the positive [MATH] case . fig.[rhob ] shows the calculated resistivity [MATH] versus the magnetic field strength [MATH] at lattice temperature [MATH] for system of carrier sheet "
+            },
+            {
+              "rank": 3,
+              "id": "fixed_window-20-37",
+              "doc_id": 20,
+              "relevant": true,
+              "vector_distance": 0.3986,
+              "rerank_score": null,
+              "snippet": "dau - level separation and the conduction electrons spread over many landau levels , a positive , dominantly linear and non - saturating magnetoresistance appears within a quite wide range of magnetic field and persists up to room temperature . this remarkable lmr provides a poss"
+            },
+            {
+              "rank": 4,
+              "id": "fixed_window-20-5",
+              "doc_id": 20,
+              "relevant": false,
+              "vector_distance": 0.453,
+              "rerank_score": null,
+              "snippet": "the [MATH] - [MATH] plane under the influence of a uniform magnetic field [MATH] applied along the [MATH] direction. [CITE] following the experimental observation, [CITE] we assume that the fermi energy locates in the gap of the bulk band and above the dirac point , i.e. the surf"
+            },
+            {
+              "rank": 5,
+              "id": "fixed_window-20-34",
+              "doc_id": 20,
+              "relevant": false,
+              "vector_distance": 0.4619,
+              "rerank_score": null,
+              "snippet": "the mobility is taken respectively to be [MATH] and [MATH] m [MATH] /vs to make the resistivity in the lmr regime . a clearly linear dependence of [MATH] on the surface density [MATH] is seen in all cases , indicating that this non - saturating linear resistivity is almost invers"
+            }
+          ]
+        },
+        "reranked": {
+          "metrics": {
+            "precision_at_5": 0.6,
+            "recall_at_5": 0.75,
+            "mrr": 1.0,
+            "doc_precision_at_5": 1.0,
+            "doc_recall_at_5": 1.0,
+            "doc_mrr": 1.0,
+            "n_relevant_in_index": 4
+          },
+          "top": [
+            {
+              "rank": 1,
+              "id": "fixed_window-20-4",
+              "doc_id": 20,
+              "relevant": true,
+              "vector_distance": 0.3243,
+              "rerank_score": 4.7411,
+              "snippet": "netotransport in it . we find that a positive , nonsaturating and dominantly linear magnetoresistance can appear within quite wide magnetic - field range in the ti surface state having a positive and finite effective g - factor . this linear magnetoresistance shows up in the syst"
+            },
+            {
+              "rank": 2,
+              "id": "fixed_window-20-37",
+              "doc_id": 20,
+              "relevant": true,
+              "vector_distance": 0.3986,
+              "rerank_score": 4.6174,
+              "snippet": "dau - level separation and the conduction electrons spread over many landau levels , a positive , dominantly linear and non - saturating magnetoresistance appears within a quite wide range of magnetic field and persists up to room temperature . this remarkable lmr provides a poss"
+            },
+            {
+              "rank": 3,
+              "id": "fixed_window-20-0",
+              "doc_id": 20,
+              "relevant": false,
+              "vector_distance": 0.5272,
+              "rerank_score": 2.4307,
+              "snippet": "it is well known that the classical magnetoresistance ( mr ) in metals or semiconductors with a closed free electron fermi surface increases quadratically with increasing magnetic field [MATH] for [MATH] and saturates when [MATH] . here [MATH] is the zero - magnetic - field mobil"
+            },
+            {
+              "rank": 4,
+              "id": "fixed_window-20-1",
+              "doc_id": 20,
+              "relevant": false,
+              "vector_distance": 0.5389,
+              "rerank_score": 1.6468,
+              "snippet": "shows a magnetoresistance linear in perpendicular magnetic field when it has an open fermi surface and a mean free path longer than the electronic larmor radius . recently , another two models , irrespective of the open fermi surface , have been constructed to provide possible me"
+            },
+            {
+              "rank": 5,
+              "id": "fixed_window-20-2",
+              "doc_id": 20,
+              "relevant": true,
+              "vector_distance": 0.478,
+              "rerank_score": 1.0871,
+              "snippet": "pectrum. [CITE] ignoring the concrete microscopic mechanism , they attributed this unusual mr to the mobility fluctuations in a strongly inhomogenous system . topological insulators [CITE] ( tis ) are novel materials with a full energy gap in bulk , while there are gapless surfac"
+            }
+          ]
+        }
+      },
+      "sentence_packed": {
+        "query": "Why does magnetoresistance stay linear instead of saturating on a topological insulator surface?",
+        "vector": {
+          "metrics": {
+            "precision_at_5": 0.8,
+            "recall_at_5": 0.5714285714285714,
+            "mrr": 1.0,
+            "doc_precision_at_5": 1.0,
+            "doc_recall_at_5": 1.0,
+            "doc_mrr": 1.0,
+            "n_relevant_in_index": 7
+          },
+          "top": [
+            {
+              "rank": 1,
+              "id": "sentence_packed-20-5",
+              "doc_id": 20,
+              "relevant": true,
+              "vector_distance": 0.318,
+              "rerank_score": null,
+              "snippet": "we find that a positive , nonsaturating and dominantly linear magnetoresistance can appear within quite wide magnetic - field range in the ti surface state having a positive and finite effective g - factor . this linear magnetoresistance shows up in the system of high carrier con"
+            },
+            {
+              "rank": 2,
+              "id": "sentence_packed-20-50",
+              "doc_id": 20,
+              "relevant": true,
+              "vector_distance": 0.3272,
+              "rerank_score": null,
+              "snippet": "when the level broadening is comparable to or larger than the landau - level separation and the conduction electrons spread over many landau levels , a positive , dominantly linear and non - saturating magnetoresistance appears within a quite wide range of magnetic field and pers"
+            },
+            {
+              "rank": 3,
+              "id": "sentence_packed-20-7",
+              "doc_id": 20,
+              "relevant": false,
+              "vector_distance": 0.3917,
+              "rerank_score": null,
+              "snippet": "hence , the contribution from the bulk band to the magnetotransport is negligible . these electrons , scattered by randomly distributed impurities and by phonons , are driven by a uniform in - plane electric field [MATH] in the topological surface ."
+            },
+            {
+              "rank": 4,
+              "id": "sentence_packed-20-51",
+              "doc_id": 20,
+              "relevant": true,
+              "vector_distance": 0.3921,
+              "rerank_score": null,
+              "snippet": "this remarkable lmr provides a possible mechanism for the recently observed linear magnetoresistance in topological insulator bi [MATH] se [MATH] nanoribbons. [CITE] in contrast to quantum hall effect which appears in the case of well formed landau levels and to abrikosov s quant"
+            },
+            {
+              "rank": 5,
+              "id": "sentence_packed-20-49",
+              "doc_id": 20,
+              "relevant": true,
+              "vector_distance": 0.3927,
+              "rerank_score": null,
+              "snippet": "these features are in good agreement with the experimental report. [CITE] in summary , we have studied the two - dimensional magnetotransport in the flat surface of a three - dimensional ti , which arises from the surface states with a wavevector - linear energy dispersion and a "
+            }
+          ]
+        },
+        "reranked": {
+          "metrics": {
+            "precision_at_5": 1.0,
+            "recall_at_5": 0.7142857142857143,
+            "mrr": 1.0,
+            "doc_precision_at_5": 1.0,
+            "doc_recall_at_5": 1.0,
+            "doc_mrr": 1.0,
+            "n_relevant_in_index": 7
+          },
+          "top": [
+            {
+              "rank": 1,
+              "id": "sentence_packed-20-50",
+              "doc_id": 20,
+              "relevant": true,
+              "vector_distance": 0.3272,
+              "rerank_score": 5.4205,
+              "snippet": "when the level broadening is comparable to or larger than the landau - level separation and the conduction electrons spread over many landau levels , a positive , dominantly linear and non - saturating magnetoresistance appears within a quite wide range of magnetic field and pers"
+            },
+            {
+              "rank": 2,
+              "id": "sentence_packed-20-5",
+              "doc_id": 20,
+              "relevant": true,
+              "vector_distance": 0.318,
+              "rerank_score": 4.8047,
+              "snippet": "we find that a positive , nonsaturating and dominantly linear magnetoresistance can appear within quite wide magnetic - field range in the ti surface state having a positive and finite effective g - factor . this linear magnetoresistance shows up in the system of high carrier con"
+            },
+            {
+              "rank": 3,
+              "id": "sentence_packed-20-49",
+              "doc_id": 20,
+              "relevant": true,
+              "vector_distance": 0.3927,
+              "rerank_score": 2.8598,
+              "snippet": "these features are in good agreement with the experimental report. [CITE] in summary , we have studied the two - dimensional magnetotransport in the flat surface of a three - dimensional ti , which arises from the surface states with a wavevector - linear energy dispersion and a "
+            },
+            {
+              "rank": 4,
+              "id": "sentence_packed-20-51",
+              "doc_id": 20,
+              "relevant": true,
+              "vector_distance": 0.3921,
+              "rerank_score": 1.8599,
+              "snippet": "this remarkable lmr provides a possible mechanism for the recently observed linear magnetoresistance in topological insulator bi [MATH] se [MATH] nanoribbons. [CITE] in contrast to quantum hall effect which appears in the case of well formed landau levels and to abrikosov s quant"
+            },
+            {
+              "rank": 5,
+              "id": "sentence_packed-20-3",
+              "doc_id": 20,
+              "relevant": true,
+              "vector_distance": 0.4431,
+              "rerank_score": 1.5737,
+              "snippet": "topological insulators [CITE] ( tis ) are novel materials with a full energy gap in bulk , while there are gapless surface states . due to its unique band structure with only one helical dirac cone and linear energy dispersion, [CITE] the surface states of the ti bi [MATH] se [MA"
+            }
+          ]
+        }
+      }
+    },
+    "q6_template_bank": {
+      "fixed_window": {
+        "query": "How are banks of waveform templates used to detect compact-object mergers in gravitational-wave data?",
+        "vector": {
+          "metrics": {
+            "precision_at_5": 1.0,
+            "recall_at_5": 0.22727272727272727,
+            "mrr": 1.0,
+            "doc_precision_at_5": 1.0,
+            "doc_recall_at_5": 1.0,
+            "doc_mrr": 1.0,
+            "n_relevant_in_index": 22
+          },
+          "top": [
+            {
+              "rank": 1,
+              "id": "fixed_window-27-0",
+              "doc_id": 27,
+              "relevant": true,
+              "vector_distance": 0.2617,
+              "rerank_score": null,
+              "snippet": "developments are currently underway to promote the sensitivity of ligo and to improve its prospect for detecting gravitational waves emitted by compact object binaries [CITE] . of particular interest are the detection of gravitational waves released during the inspiral and merger"
+            },
+            {
+              "rank": 2,
+              "id": "fixed_window-27-2",
+              "doc_id": 27,
+              "relevant": true,
+              "vector_distance": 0.3413,
+              "rerank_score": null,
+              "snippet": "[CITE] or effective - one - body models [CITE] . we shall focus here on the phenomenological b ( phenomb ) waveforms developed by [CITE] . this waveform family describes bbh systems with varying masses and aligned - spin magnitudes ( i.e. non - precessing binaries ) . the family "
+            },
+            {
+              "rank": 3,
+              "id": "fixed_window-27-1",
+              "doc_id": 27,
+              "relevant": true,
+              "vector_distance": 0.3508,
+              "rerank_score": null,
+              "snippet": "to a pre - constructed template bank of gravitational waveforms . the templates are chosen to cover some interesting region of mass - spin parameter space and are placed throughout it in such a way that guarantees some minimal match between any arbitrary point in parameter space "
+            },
+            {
+              "rank": 4,
+              "id": "fixed_window-27-6",
+              "doc_id": 27,
+              "relevant": true,
+              "vector_distance": 0.4719,
+              "rerank_score": null,
+              "snippet": "meters . this paper is organized as follows . we begin in section [ sec : mbias ] where we provide definitions to important terminology used in our paper . we then compare our nr hybrid waveforms to the phenomb family and show that a mass - bias exists between the two . in sectio"
+            },
+            {
+              "rank": 5,
+              "id": "fixed_window-27-7",
+              "doc_id": 27,
+              "relevant": true,
+              "vector_distance": 0.5208,
+              "rerank_score": null,
+              "snippet": "aginary parts store the sine and cosine components of the wave . the specific form of [MATH] depends on the parameters of the system , in our case the total mass [MATH] and the mass - ratio [MATH] . while [MATH] is a continuous function of time , we discretize by sampling [MATH] "
+            }
+          ]
+        },
+        "reranked": {
+          "metrics": {
+            "precision_at_5": 1.0,
+            "recall_at_5": 0.22727272727272727,
+            "mrr": 1.0,
+            "doc_precision_at_5": 1.0,
+            "doc_recall_at_5": 1.0,
+            "doc_mrr": 1.0,
+            "n_relevant_in_index": 22
+          },
+          "top": [
+            {
+              "rank": 1,
+              "id": "fixed_window-27-0",
+              "doc_id": 27,
+              "relevant": true,
+              "vector_distance": 0.2617,
+              "rerank_score": 5.6467,
+              "snippet": "developments are currently underway to promote the sensitivity of ligo and to improve its prospect for detecting gravitational waves emitted by compact object binaries [CITE] . of particular interest are the detection of gravitational waves released during the inspiral and merger"
+            },
+            {
+              "rank": 2,
+              "id": "fixed_window-27-1",
+              "doc_id": 27,
+              "relevant": true,
+              "vector_distance": 0.3508,
+              "rerank_score": 3.4521,
+              "snippet": "to a pre - constructed template bank of gravitational waveforms . the templates are chosen to cover some interesting region of mass - spin parameter space and are placed throughout it in such a way that guarantees some minimal match between any arbitrary point in parameter space "
+            },
+            {
+              "rank": 3,
+              "id": "fixed_window-27-2",
+              "doc_id": 27,
+              "relevant": true,
+              "vector_distance": 0.3413,
+              "rerank_score": 3.1685,
+              "snippet": "[CITE] or effective - one - body models [CITE] . we shall focus here on the phenomenological b ( phenomb ) waveforms developed by [CITE] . this waveform family describes bbh systems with varying masses and aligned - spin magnitudes ( i.e. non - precessing binaries ) . the family "
+            },
+            {
+              "rank": 4,
+              "id": "fixed_window-27-41",
+              "doc_id": 27,
+              "relevant": true,
+              "vector_distance": 0.5719,
+              "rerank_score": 0.7334,
+              "snippet": "previous work done by [CITE] . for the two - dimensional case the construction of a template bank is no longer as straightforward as before due to the additional degree of freedom associated with varying [MATH] . one method that has been advanced for this purpose is to place temp"
+            },
+            {
+              "rank": 5,
+              "id": "fixed_window-27-17",
+              "doc_id": 27,
+              "relevant": true,
+              "vector_distance": 0.5617,
+              "rerank_score": 0.6944,
+              "snippet": "l basis via the svd of a bank of phenomb template waveforms , and then interpolate the coefficients of nr waveforms projected onto this basis to generate a waveform family with improved nr faithfulness . the first step is to construct a template bank of phenomb waveforms , with a"
+            }
+          ]
+        }
+      },
+      "sentence_packed": {
+        "query": "How are banks of waveform templates used to detect compact-object mergers in gravitational-wave data?",
+        "vector": {
+          "metrics": {
+            "precision_at_5": 1.0,
+            "recall_at_5": 0.16666666666666666,
+            "mrr": 1.0,
+            "doc_precision_at_5": 1.0,
+            "doc_recall_at_5": 1.0,
+            "doc_mrr": 1.0,
+            "n_relevant_in_index": 30
+          },
+          "top": [
+            {
+              "rank": 1,
+              "id": "sentence_packed-27-0",
+              "doc_id": 27,
+              "relevant": true,
+              "vector_distance": 0.2737,
+              "rerank_score": null,
+              "snippet": "developments are currently underway to promote the sensitivity of ligo and to improve its prospect for detecting gravitational waves emitted by compact object binaries [CITE] . of particular interest are the detection of gravitational waves released during the inspiral and merger"
+            },
+            {
+              "rank": 2,
+              "id": "sentence_packed-27-3",
+              "doc_id": 27,
+              "relevant": true,
+              "vector_distance": 0.2873,
+              "rerank_score": null,
+              "snippet": "the family was constructed by fitting a parameterized model to existing nr waveforms in order to generate a full inspiral - merger - ringdown ( imr ) description as a function of mass and spin . the obvious appeal of the phenomb family is that it allows for the inexpensive constr"
+            },
+            {
+              "rank": 3,
+              "id": "sentence_packed-27-1",
+              "doc_id": 27,
+              "relevant": true,
+              "vector_distance": 0.297,
+              "rerank_score": null,
+              "snippet": "the detection pipeline currently employed by ligo involves a matched - filtering process whereby signals are compared to a pre - constructed template bank of gravitational waveforms . the templates are chosen to cover some interesting region of mass - spin parameter space and are"
+            },
+            {
+              "rank": 4,
+              "id": "sentence_packed-27-2",
+              "doc_id": 27,
+              "relevant": true,
+              "vector_distance": 0.4656,
+              "rerank_score": null,
+              "snippet": "[CITE] ) evaluated at arbitrary mass and spin ; something that can not be achieved using the current set of numerical relativity ( nr ) waveforms . to circumvent this issue , ligo exploits the use of analytical waveform families like phenomenological models [CITE] or effective - "
+            },
+            {
+              "rank": 5,
+              "id": "sentence_packed-27-8",
+              "doc_id": 27,
+              "relevant": true,
+              "vector_distance": 0.4765,
+              "rerank_score": null,
+              "snippet": "we then compare our nr hybrid waveforms to the phenomb family and show that a mass - bias exists between the two . in section [ sec : method ] we present our svd accuracy booster applied to the case study of equal - mass , zero - spin binaries . in section [ sec:2d ] we investiga"
+            }
+          ]
+        },
+        "reranked": {
+          "metrics": {
+            "precision_at_5": 1.0,
+            "recall_at_5": 0.16666666666666666,
+            "mrr": 1.0,
+            "doc_precision_at_5": 1.0,
+            "doc_recall_at_5": 1.0,
+            "doc_mrr": 1.0,
+            "n_relevant_in_index": 30
+          },
+          "top": [
+            {
+              "rank": 1,
+              "id": "sentence_packed-27-0",
+              "doc_id": 27,
+              "relevant": true,
+              "vector_distance": 0.2737,
+              "rerank_score": 5.4714,
+              "snippet": "developments are currently underway to promote the sensitivity of ligo and to improve its prospect for detecting gravitational waves emitted by compact object binaries [CITE] . of particular interest are the detection of gravitational waves released during the inspiral and merger"
+            },
+            {
+              "rank": 2,
+              "id": "sentence_packed-27-3",
+              "doc_id": 27,
+              "relevant": true,
+              "vector_distance": 0.2873,
+              "rerank_score": 4.5357,
+              "snippet": "the family was constructed by fitting a parameterized model to existing nr waveforms in order to generate a full inspiral - merger - ringdown ( imr ) description as a function of mass and spin . the obvious appeal of the phenomb family is that it allows for the inexpensive constr"
+            },
+            {
+              "rank": 3,
+              "id": "sentence_packed-27-1",
+              "doc_id": 27,
+              "relevant": true,
+              "vector_distance": 0.297,
+              "rerank_score": 4.3314,
+              "snippet": "the detection pipeline currently employed by ligo involves a matched - filtering process whereby signals are compared to a pre - constructed template bank of gravitational waveforms . the templates are chosen to cover some interesting region of mass - spin parameter space and are"
+            },
+            {
+              "rank": 4,
+              "id": "sentence_packed-27-23",
+              "doc_id": 27,
+              "relevant": true,
+              "vector_distance": 0.5849,
+              "rerank_score": 1.4392,
+              "snippet": "successive templates are found by sequentially moving toward higher mass in order to find waveforms satisfying until some maximum mass [MATH] is reached . throughout each trial , overlap between waveforms is maximized continuously over phase shifts and discretely over time shifts"
+            },
+            {
+              "rank": 5,
+              "id": "sentence_packed-27-61",
+              "doc_id": 27,
+              "relevant": true,
+              "vector_distance": 0.5256,
+              "rerank_score": 0.8072,
+              "snippet": "we have shown that svd can be used to improve the representation of nr waveforms from a phenomb template bank . a reasonably reduced svd basis was able to reduce mismatch by a factor of five compared to phenomb waveforms optimized over mass . there was also no mass - bias associa"
+            }
+          ]
+        }
+      }
+    }
+  },
+  "memory": {
+    "turn1_query": "How do magnetic tunnel junctions act as nanoelectronic synapses for neuromorphic memory?",
+    "turn2_user": "How does the frequency of the input affect it?",
+    "turn2_rewritten": "How do magnetic tunnel junctions act as nanoelectronic synapses for neuromorphic memory? Follow-up question: How does the frequency of the input affect it?",
+    "mechanism": "If the new question contains a pronoun or demonstrative, prepend the previous user question before embedding and reranking.",
+    "turn1": {
+      "fixed_window": {
+        "query": "How do magnetic tunnel junctions act as nanoelectronic synapses for neuromorphic memory?",
+        "vector": {
+          "metrics": {
+            "precision_at_5": 0.6,
+            "recall_at_5": 0.375,
+            "mrr": 1.0,
+            "doc_precision_at_5": 1.0,
+            "doc_recall_at_5": 1.0,
+            "doc_mrr": 1.0,
+            "n_relevant_in_index": 8
+          },
+          "top": [
+            {
+              "rank": 1,
+              "id": "fixed_window-7-8",
+              "doc_id": 7,
+              "relevant": true,
+              "vector_distance": 0.2504,
+              "rerank_score": null,
+              "snippet": "ransition to a long - term stable resistance state on frequent stimulations . hence a competition between synaptic memory reinforcement or strengthening and memory loss is a crucial requirement for such nanoelectronic synapses . in the next section , we will describe the mapping "
+            },
+            {
+              "rank": 2,
+              "id": "fixed_window-7-3",
+              "doc_id": 7,
+              "relevant": true,
+              "vector_distance": 0.3575,
+              "rerank_score": null,
+              "snippet": "asurements observed in biological synapses in nanoelectronic devices like phase change memories [CITE] , [MATH] memristors [CITE] and spintronic devices [CITE] , etc . however , majority of the research have focused on non - volatile plasticity changes of the synapse in response "
+            },
+            {
+              "rank": 3,
+              "id": "fixed_window-7-21",
+              "doc_id": 7,
+              "relevant": false,
+              "vector_distance": 0.3678,
+              "rerank_score": null,
+              "snippet": "wever , information gets transferred to ltm progressively for [MATH] . it is worth noting here , that the same amount of flux is transmitted through the mtj in both cases . the simulation not only provides a visual depiction of the temporal evolution of a large array of mtj condu"
+            },
+            {
+              "rank": 4,
+              "id": "fixed_window-7-23",
+              "doc_id": 7,
+              "relevant": false,
+              "vector_distance": 0.3842,
+              "rerank_score": null,
+              "snippet": "in [CITE] and 0.5s in [CITE] ) . in contrast , similar mechanisms can be exhibited in mtj synapses at much lower energy consumption ( by stimulus magnitudes of a few hundred [MATH] and duration of a few [MATH] ) . we believe that this work will stimulate proof - of - concept expe"
+            },
+            {
+              "rank": 5,
+              "id": "fixed_window-7-7",
+              "doc_id": 7,
+              "relevant": true,
+              "vector_distance": 0.3866,
+              "rerank_score": null,
+              "snippet": "erm memory ( ltm ) models proposed by atkinson and shiffrin [CITE] ( fig . [ drawing1](b ) ) . this psychological model partitions the human memory into an stm and an ltm . on the arrival of an input stimulus , information is first stored in the stm . however , upon frequent rehe"
+            }
+          ]
+        },
+        "reranked": {
+          "metrics": {
+            "precision_at_5": 0.8,
+            "recall_at_5": 0.5,
+            "mrr": 1.0,
+            "doc_precision_at_5": 1.0,
+            "doc_recall_at_5": 1.0,
+            "doc_mrr": 1.0,
+            "n_relevant_in_index": 8
+          },
+          "top": [
+            {
+              "rank": 1,
+              "id": "fixed_window-7-8",
+              "doc_id": 7,
+              "relevant": true,
+              "vector_distance": 0.2504,
+              "rerank_score": 1.5366,
+              "snippet": "ransition to a long - term stable resistance state on frequent stimulations . hence a competition between synaptic memory reinforcement or strengthening and memory loss is a crucial requirement for such nanoelectronic synapses . in the next section , we will describe the mapping "
+            },
+            {
+              "rank": 2,
+              "id": "fixed_window-7-3",
+              "doc_id": 7,
+              "relevant": true,
+              "vector_distance": 0.3575,
+              "rerank_score": -1.9224,
+              "snippet": "asurements observed in biological synapses in nanoelectronic devices like phase change memories [CITE] , [MATH] memristors [CITE] and spintronic devices [CITE] , etc . however , majority of the research have focused on non - volatile plasticity changes of the synapse in response "
+            },
+            {
+              "rank": 3,
+              "id": "fixed_window-7-4",
+              "doc_id": 7,
+              "relevant": true,
+              "vector_distance": 0.405,
+              "rerank_score": -2.5374,
+              "snippet": "ased on the frequency of the incoming action potentials . such volatile or meta - stable synaptic plasticity mechanisms can lead to neuromorphic architectures where the synaptic memory can adapt itself to a changing environment since sections of the memory that have been not rece"
+            },
+            {
+              "rank": 4,
+              "id": "fixed_window-7-2",
+              "doc_id": 7,
+              "relevant": true,
+              "vector_distance": 0.3905,
+              "rerank_score": -2.7128,
+              "snippet": "upercomputer where the power consumption was reported to be of the order of a few [MATH] [CITE] . while the power required to simulate the human brain will rise significantly as we proceed along the hierarchy in the animal kingdom , actual power consumption in the mammalian brain"
+            },
+            {
+              "rank": 5,
+              "id": "fixed_window-7-23",
+              "doc_id": 7,
+              "relevant": false,
+              "vector_distance": 0.3842,
+              "rerank_score": -4.177,
+              "snippet": "in [CITE] and 0.5s in [CITE] ) . in contrast , similar mechanisms can be exhibited in mtj synapses at much lower energy consumption ( by stimulus magnitudes of a few hundred [MATH] and duration of a few [MATH] ) . we believe that this work will stimulate proof - of - concept expe"
+            }
+          ]
+        }
+      },
+      "sentence_packed": {
+        "query": "How do magnetic tunnel junctions act as nanoelectronic synapses for neuromorphic memory?",
+        "vector": {
+          "metrics": {
+            "precision_at_5": 0.8,
+            "recall_at_5": 0.3333333333333333,
+            "mrr": 1.0,
+            "doc_precision_at_5": 1.0,
+            "doc_recall_at_5": 1.0,
+            "doc_mrr": 1.0,
+            "n_relevant_in_index": 12
+          },
+          "top": [
+            {
+              "rank": 1,
+              "id": "sentence_packed-7-13",
+              "doc_id": 7,
+              "relevant": true,
+              "vector_distance": 0.3244,
+              "rerank_score": null,
+              "snippet": "in the next section , we will describe the mapping of the magnetization dynamics of a nanomagnet to such volatile synaptic plasticity mechanisms observed in the brain . let us first describe the device structure and principle of operation of an mtj [CITE] as shown in fig . [ draw"
+            },
+            {
+              "rank": 2,
+              "id": "sentence_packed-7-5",
+              "doc_id": 7,
+              "relevant": false,
+              "vector_distance": 0.337,
+              "rerank_score": null,
+              "snippet": "meanwhile , researchers have attempted to mimic several plasticity measurements observed in biological synapses in nanoelectronic devices like phase change memories [CITE] , [MATH] memristors [CITE] and spintronic devices [CITE] , etc . however , majority of the research have foc"
+            },
+            {
+              "rank": 3,
+              "id": "sentence_packed-7-12",
+              "doc_id": 7,
+              "relevant": true,
+              "vector_distance": 0.3468,
+              "rerank_score": null,
+              "snippet": "while the `` forgetting '' phenomena occurs at a fast rate in the stm , information can be stored for a much longer duration in the ltm . in order to mimic such volatile synaptic plasticity mechanisms , a nanoelectronic device is required that is able to undergo meta - stable res"
+            },
+            {
+              "rank": 4,
+              "id": "sentence_packed-7-4",
+              "doc_id": 7,
+              "relevant": true,
+              "vector_distance": 0.3493,
+              "rerank_score": null,
+              "snippet": "while the power required to simulate the human brain will rise significantly as we proceed along the hierarchy in the animal kingdom , actual power consumption in the mammalian brain is just a few tens of watts . in a neuromorphic computing platform , synapses form the pathways b"
+            },
+            {
+              "rank": 5,
+              "id": "sentence_packed-7-8",
+              "doc_id": 7,
+              "relevant": true,
+              "vector_distance": 0.3777,
+              "rerank_score": null,
+              "snippet": "such volatile or meta - stable synaptic plasticity mechanisms can lead to neuromorphic architectures where the synaptic memory can adapt itself to a changing environment since sections of the memory that have been not receiving frequent stimulus can be now erased and utilized to "
+            }
+          ]
+        },
+        "reranked": {
+          "metrics": {
+            "precision_at_5": 0.8,
+            "recall_at_5": 0.3333333333333333,
+            "mrr": 1.0,
+            "doc_precision_at_5": 1.0,
+            "doc_recall_at_5": 1.0,
+            "doc_mrr": 1.0,
+            "n_relevant_in_index": 12
+          },
+          "top": [
+            {
+              "rank": 1,
+              "id": "sentence_packed-7-12",
+              "doc_id": 7,
+              "relevant": true,
+              "vector_distance": 0.3468,
+              "rerank_score": -0.81,
+              "snippet": "while the `` forgetting '' phenomena occurs at a fast rate in the stm , information can be stored for a much longer duration in the ltm . in order to mimic such volatile synaptic plasticity mechanisms , a nanoelectronic device is required that is able to undergo meta - stable res"
+            },
+            {
+              "rank": 2,
+              "id": "sentence_packed-7-4",
+              "doc_id": 7,
+              "relevant": true,
+              "vector_distance": 0.3493,
+              "rerank_score": -0.8491,
+              "snippet": "while the power required to simulate the human brain will rise significantly as we proceed along the hierarchy in the animal kingdom , actual power consumption in the mammalian brain is just a few tens of watts . in a neuromorphic computing platform , synapses form the pathways b"
+            },
+            {
+              "rank": 3,
+              "id": "sentence_packed-7-5",
+              "doc_id": 7,
+              "relevant": false,
+              "vector_distance": 0.337,
+              "rerank_score": -2.4416,
+              "snippet": "meanwhile , researchers have attempted to mimic several plasticity measurements observed in biological synapses in nanoelectronic devices like phase change memories [CITE] , [MATH] memristors [CITE] and spintronic devices [CITE] , etc . however , majority of the research have foc"
+            },
+            {
+              "rank": 4,
+              "id": "sentence_packed-7-7",
+              "doc_id": 7,
+              "relevant": true,
+              "vector_distance": 0.4197,
+              "rerank_score": -2.4991,
+              "snippet": "as a matter of fact , neuroscience studies performed in [CITE] have demonstrated that synapses exhibit an inherent learning ability where they undergo volatile plasticity changes and ultimately undergo long - term plasticity conditionally based on the frequency of the incoming ac"
+            },
+            {
+              "rank": 5,
+              "id": "sentence_packed-7-2",
+              "doc_id": 7,
+              "relevant": true,
+              "vector_distance": 0.4043,
+              "rerank_score": -2.6801,
+              "snippet": "while boolean computation is based on the sequential fetch , decode and execute cycles , such neuromorphic computing architectures are massively parallel and event - driven and are potentially appealing for pattern recognition tasks and cortical brain simulations to that end , re"
+            }
+          ]
+        }
+      }
+    },
+    "turn2": {
+      "fixed_window": {
+        "without_memory": {
+          "query": "How does the frequency of the input affect it?",
+          "vector": {
+            "metrics": {
+              "precision_at_5": 0.0,
+              "recall_at_5": 0.0,
+              "mrr": 0.0,
+              "doc_precision_at_5": 0.0,
+              "doc_recall_at_5": 0.0,
+              "doc_mrr": 0.07692307692307693,
+              "n_relevant_in_index": 5
+            },
+            "top": [
+              {
+                "rank": 1,
+                "id": "fixed_window-53-12",
+                "doc_id": 53,
+                "relevant": false,
+                "vector_distance": 0.6112,
+                "rerank_score": null,
+                "snippet": "he first term of the right - hand side of tends to [MATH] , which indicates that the steady - state covariance of the parameter error decreases when the signal [MATH] increases in magnitude , and that it can be made smaller via appropriate choices of the gains [MATH] and [MATH] ."
+              },
+              {
+                "rank": 2,
+                "id": "fixed_window-53-4",
+                "doc_id": 53,
+                "relevant": false,
+                "vector_distance": 0.6173,
+                "rerank_score": null,
+                "snippet": "error , which can be used in the stability analysis of a detectable or `` tunable '' adaptive system via an output - injection argument ; see [CITE] . a generalization of is [MATH] with [MATH] and [MATH] constant , symmetric , positive - definite [MATH] matrices such that [MATH] "
+              },
+              {
+                "rank": 3,
+                "id": "fixed_window-53-13",
+                "doc_id": 53,
+                "relevant": false,
+                "vector_distance": 0.6198,
+                "rerank_score": null,
+                "snippet": "the values of [MATH] and [MATH] respectively when [MATH] is a two - dimensional step signal . in figure [ fig : sin ] the regressor is a sinusoid , in figure [ fig : sia ] an exponentially increasing sinusoid , and in figure [ fig : prb ] a pseudorandom signal generated using mat"
+              },
+              {
+                "rank": 4,
+                "id": "fixed_window-53-15",
+                "doc_id": 53,
+                "relevant": false,
+                "vector_distance": 0.6404,
+                "rerank_score": null,
+                "snippet": "in [ sec : covariance ] indicates that the performance and convergence properties of the accelerating tuner , together with its moderate computational complexity , may indeed make it a desirable tool for adaptive filtering applications . it seems that a better transient [MATH] st"
+              },
+              {
+                "rank": 5,
+                "id": "fixed_window-33-29",
+                "doc_id": 33,
+                "relevant": false,
+                "vector_distance": 0.6415,
+                "rerank_score": null,
+                "snippet": "ithin the uncertainty ( [MATH] khz ) . we have also show that the use of squeezed fields leads to better signal contrast , as expected . we would like to thank our colleagues at the ligo laboratory , especially thomas corbitt and christopher wipf , and stan whitcomb for his valua"
+              }
+            ]
+          },
+          "reranked": {
+            "metrics": {
+              "precision_at_5": 0.0,
+              "recall_at_5": 0.0,
+              "mrr": 0.0,
+              "doc_precision_at_5": 0.2,
+              "doc_recall_at_5": 1.0,
+              "doc_mrr": 1.0,
+              "n_relevant_in_index": 5
+            },
+            "top": [
+              {
+                "rank": 1,
+                "id": "fixed_window-7-15",
+                "doc_id": 7,
+                "relevant": false,
+                "vector_distance": 0.6898,
+                "rerank_score": 2.1874,
+                "snippet": "is a gaussian distribution with zero mean and unit standard deviation , [MATH] is boltzmann constant , [MATH] is the temperature and [MATH] is the simulation time step . equation [ llg ] can be reformulated by simple algebraic manipulations as , [MATH] hence , in the presence of "
+              },
+              {
+                "rank": 2,
+                "id": "fixed_window-43-14",
+                "doc_id": 43,
+                "relevant": false,
+                "vector_distance": 0.7053,
+                "rerank_score": -5.4297,
+                "snippet": "hz and the discrepancy represents an estimate of the accuracy of the dft calculation which is known to not properly account for the electronic correlations . [MATH] as nqr and [MATH] rb nmr spectra were derived by recording the integral of the echo signal after a [MATH] pulse seq"
+              },
+              {
+                "rank": 3,
+                "id": "fixed_window-80-15",
+                "doc_id": 80,
+                "relevant": false,
+                "vector_distance": 0.6985,
+                "rerank_score": -5.7968,
+                "snippet": "unidirectionality via the input signal itself ( note that the input device does indeed break the inversion symmetry of the system in fig . this possible remedy was studied theoretically in ref . [CITE] which reached the conclusion that it does not always work . in fact , the proc"
+              },
+              {
+                "rank": 4,
+                "id": "fixed_window-33-17",
+                "doc_id": 33,
+                "relevant": false,
+                "vector_distance": 0.7005,
+                "rerank_score": -6.0819,
+                "snippet": "cavity - coupled response to injection of a classically noisy state with [MATH] db , [MATH] db . comparing ( e ) and ( c ) , we note that squeezing improves the signal contrast , but the classical noise and the anti - squeezed quadrature behave almost identically [ cf . ( d ) and"
+              },
+              {
+                "rank": 5,
+                "id": "fixed_window-55-55",
+                "doc_id": 55,
+                "relevant": false,
+                "vector_distance": 0.6636,
+                "rerank_score": -6.5237,
+                "snippet": "omponent of the electric field are emitted and the same component is measured on those detectors . the time step size of measurements is 0.133 nanosecond and the maximal amplitudes of the measured signal are seen about 2 nanoseconds , see figure 5 . since 1 nanosecond corresponds"
+              }
+            ]
+          }
+        },
+        "with_memory": {
+          "query": "How do magnetic tunnel junctions act as nanoelectronic synapses for neuromorphic memory? Follow-up question: How does the frequency of the input affect it?",
+          "vector": {
+            "metrics": {
+              "precision_at_5": 0.4,
+              "recall_at_5": 0.4,
+              "mrr": 0.5,
+              "doc_precision_at_5": 1.0,
+              "doc_recall_at_5": 1.0,
+              "doc_mrr": 1.0,
+              "n_relevant_in_index": 5
+            },
+            "top": [
+              {
+                "rank": 1,
+                "id": "fixed_window-7-8",
+                "doc_id": 7,
+                "relevant": false,
+                "vector_distance": 0.28,
+                "rerank_score": null,
+                "snippet": "ransition to a long - term stable resistance state on frequent stimulations . hence a competition between synaptic memory reinforcement or strengthening and memory loss is a crucial requirement for such nanoelectronic synapses . in the next section , we will describe the mapping "
+              },
+              {
+                "rank": 2,
+                "id": "fixed_window-7-3",
+                "doc_id": 7,
+                "relevant": true,
+                "vector_distance": 0.3624,
+                "rerank_score": null,
+                "snippet": "asurements observed in biological synapses in nanoelectronic devices like phase change memories [CITE] , [MATH] memristors [CITE] and spintronic devices [CITE] , etc . however , majority of the research have focused on non - volatile plasticity changes of the synapse in response "
+              },
+              {
+                "rank": 3,
+                "id": "fixed_window-7-7",
+                "doc_id": 7,
+                "relevant": true,
+                "vector_distance": 0.3724,
+                "rerank_score": null,
+                "snippet": "erm memory ( ltm ) models proposed by atkinson and shiffrin [CITE] ( fig . [ drawing1](b ) ) . this psychological model partitions the human memory into an stm and an ltm . on the arrival of an input stimulus , information is first stored in the stm . however , upon frequent rehe"
+              },
+              {
+                "rank": 4,
+                "id": "fixed_window-7-21",
+                "doc_id": 7,
+                "relevant": false,
+                "vector_distance": 0.3849,
+                "rerank_score": null,
+                "snippet": "wever , information gets transferred to ltm progressively for [MATH] . it is worth noting here , that the same amount of flux is transmitted through the mtj in both cases . the simulation not only provides a visual depiction of the temporal evolution of a large array of mtj condu"
+              },
+              {
+                "rank": 5,
+                "id": "fixed_window-7-2",
+                "doc_id": 7,
+                "relevant": false,
+                "vector_distance": 0.3961,
+                "rerank_score": null,
+                "snippet": "upercomputer where the power consumption was reported to be of the order of a few [MATH] [CITE] . while the power required to simulate the human brain will rise significantly as we proceed along the hierarchy in the animal kingdom , actual power consumption in the mammalian brain"
+              }
+            ]
+          },
+          "reranked": {
+            "metrics": {
+              "precision_at_5": 0.6,
+              "recall_at_5": 0.6,
+              "mrr": 0.5,
+              "doc_precision_at_5": 1.0,
+              "doc_recall_at_5": 1.0,
+              "doc_mrr": 1.0,
+              "n_relevant_in_index": 5
+            },
+            "top": [
+              {
+                "rank": 1,
+                "id": "fixed_window-7-8",
+                "doc_id": 7,
+                "relevant": false,
+                "vector_distance": 0.28,
+                "rerank_score": 0.0118,
+                "snippet": "ransition to a long - term stable resistance state on frequent stimulations . hence a competition between synaptic memory reinforcement or strengthening and memory loss is a crucial requirement for such nanoelectronic synapses . in the next section , we will describe the mapping "
+              },
+              {
+                "rank": 2,
+                "id": "fixed_window-7-3",
+                "doc_id": 7,
+                "relevant": true,
+                "vector_distance": 0.3624,
+                "rerank_score": -2.3038,
+                "snippet": "asurements observed in biological synapses in nanoelectronic devices like phase change memories [CITE] , [MATH] memristors [CITE] and spintronic devices [CITE] , etc . however , majority of the research have focused on non - volatile plasticity changes of the synapse in response "
+              },
+              {
+                "rank": 3,
+                "id": "fixed_window-7-4",
+                "doc_id": 7,
+                "relevant": true,
+                "vector_distance": 0.4152,
+                "rerank_score": -2.764,
+                "snippet": "ased on the frequency of the incoming action potentials . such volatile or meta - stable synaptic plasticity mechanisms can lead to neuromorphic architectures where the synaptic memory can adapt itself to a changing environment since sections of the memory that have been not rece"
+              },
+              {
+                "rank": 4,
+                "id": "fixed_window-7-7",
+                "doc_id": 7,
+                "relevant": true,
+                "vector_distance": 0.3724,
+                "rerank_score": -3.432,
+                "snippet": "erm memory ( ltm ) models proposed by atkinson and shiffrin [CITE] ( fig . [ drawing1](b ) ) . this psychological model partitions the human memory into an stm and an ltm . on the arrival of an input stimulus , information is first stored in the stm . however , upon frequent rehe"
+              },
+              {
+                "rank": 5,
+                "id": "fixed_window-7-2",
+                "doc_id": 7,
+                "relevant": false,
+                "vector_distance": 0.3961,
+                "rerank_score": -3.4875,
+                "snippet": "upercomputer where the power consumption was reported to be of the order of a few [MATH] [CITE] . while the power required to simulate the human brain will rise significantly as we proceed along the hierarchy in the animal kingdom , actual power consumption in the mammalian brain"
+              }
+            ]
+          }
+        }
+      },
+      "sentence_packed": {
+        "without_memory": {
+          "query": "How does the frequency of the input affect it?",
+          "vector": {
+            "metrics": {
+              "precision_at_5": 0.0,
+              "recall_at_5": 0.0,
+              "mrr": 0.05,
+              "doc_precision_at_5": 0.0,
+              "doc_recall_at_5": 0.0,
+              "doc_mrr": 0.05,
+              "n_relevant_in_index": 5
+            },
+            "top": [
+              {
+                "rank": 1,
+                "id": "sentence_packed-55-63",
+                "doc_id": 55,
+                "relevant": false,
+                "vector_distance": 0.5313,
+                "rerank_score": null,
+                "snippet": "the schematic diagram of data collection is presented on figure [ fig : setup ] . the device has two sources placed on the top of a car . sources emit pulses . the device also has 16 detectors . detectors measure backscattering time resolved signal , which is actually the voltage"
+              },
+              {
+                "rank": 2,
+                "id": "sentence_packed-55-64",
+                "doc_id": 55,
+                "relevant": false,
+                "vector_distance": 0.624,
+                "rerank_score": null,
+                "snippet": "since 1 nanosecond corresponds to the frequency of 1 gigahertz [CITE] , then the corresponding frequency range is in gigahertz , which are considered as high frequencies in physics . the car moves and the time dependent backscattering signal is measured on distances from 20 to 8 "
+              },
+              {
+                "rank": 3,
+                "id": "sentence_packed-33-27",
+                "doc_id": 33,
+                "relevant": false,
+                "vector_distance": 0.6451,
+                "rerank_score": null,
+                "snippet": "the frequency - shift is necessary to ensure that no cavity transmitted light at the fundamental frequency is injected into the opo cavity since it acts as a seed and degrades broadband squeezing due to the imperfect isolation of the faraday isolator [CITE] . this is especially i"
+              },
+              {
+                "rank": 4,
+                "id": "sentence_packed-22-23",
+                "doc_id": 22,
+                "relevant": false,
+                "vector_distance": 0.6452,
+                "rerank_score": null,
+                "snippet": "for both beams , energy is deposited via excitation , in addition the medium is ionised in the case of the proton beam . , width=294 ] for the signal recording , sensors based on the piezo - electric effect [CITE] were used . a full characterisation of these sensors had been perf"
+              },
+              {
+                "rank": 5,
+                "id": "sentence_packed-53-21",
+                "doc_id": 53,
+                "relevant": false,
+                "vector_distance": 0.6532,
+                "rerank_score": null,
+                "snippet": "it seems that a better transient [MATH] steady - state performance compromise is achievable with the accelerating tuner than with the velocity tuner . to verify this conjecture , a study of convergence properties of the accelerating tuner and their relation with the persistence o"
+              }
+            ]
+          },
+          "reranked": {
+            "metrics": {
+              "precision_at_5": 0.2,
+              "recall_at_5": 0.2,
+              "mrr": 1.0,
+              "doc_precision_at_5": 0.2,
+              "doc_recall_at_5": 1.0,
+              "doc_mrr": 1.0,
+              "n_relevant_in_index": 5
+            },
+            "top": [
+              {
+                "rank": 1,
+                "id": "sentence_packed-7-21",
+                "doc_id": 7,
+                "relevant": true,
+                "vector_distance": 0.6948,
+                "rerank_score": 4.7179,
+                "snippet": "it is worth noting here that , like traditional semiconductor memories , magnitude and duration of the input stimulus will definitely have an impact on the stp - ltp transition of the synapse . however , frequency of the input is a critical factor in this scenario . even though t"
+              },
+              {
+                "rank": 2,
+                "id": "sentence_packed-80-18",
+                "doc_id": 80,
+                "relevant": false,
+                "vector_distance": 0.6619,
+                "rerank_score": -3.1253,
+                "snippet": "[CITE] which reached the conclusion that it does not always work . in fact , the process of logic signal propagation under this scenario is inefficient thermally assisted random walk and the final logic state , if reached , can be destroyed by thermal fluctuations . the idea of u"
+              },
+              {
+                "rank": 3,
+                "id": "sentence_packed-33-27",
+                "doc_id": 33,
+                "relevant": false,
+                "vector_distance": 0.6451,
+                "rerank_score": -5.5334,
+                "snippet": "the frequency - shift is necessary to ensure that no cavity transmitted light at the fundamental frequency is injected into the opo cavity since it acts as a seed and degrades broadband squeezing due to the imperfect isolation of the faraday isolator [CITE] . this is especially i"
+              },
+              {
+                "rank": 4,
+                "id": "sentence_packed-33-1",
+                "doc_id": 33,
+                "relevant": false,
+                "vector_distance": 0.6863,
+                "rerank_score": -5.9388,
+                "snippet": "they include absorption and scattering losses due to impurities in the cavity material , and light - induced losses due to nonlinear processes . due to the extremely small mode volume and high q - factor of the cavity , the cavity build - up intensity is extremely high , even in "
+              },
+              {
+                "rank": 5,
+                "id": "sentence_packed-87-27",
+                "doc_id": 87,
+                "relevant": false,
+                "vector_distance": 0.6729,
+                "rerank_score": -6.0112,
+                "snippet": "the finite velocity perturbations would then induce an additional density change in order to maintain the conservation of particles ( equation of continuity ) under localized disturbances . consequently , the total density variation in the frequency - shift becomes [MATH] where ["
+              }
+            ]
+          }
+        },
+        "with_memory": {
+          "query": "How do magnetic tunnel junctions act as nanoelectronic synapses for neuromorphic memory? Follow-up question: How does the frequency of the input affect it?",
+          "vector": {
+            "metrics": {
+              "precision_at_5": 0.2,
+              "recall_at_5": 0.2,
+              "mrr": 0.5,
+              "doc_precision_at_5": 1.0,
+              "doc_recall_at_5": 1.0,
+              "doc_mrr": 1.0,
+              "n_relevant_in_index": 5
+            },
+            "top": [
+              {
+                "rank": 1,
+                "id": "sentence_packed-7-5",
+                "doc_id": 7,
+                "relevant": false,
+                "vector_distance": 0.3361,
+                "rerank_score": null,
+                "snippet": "meanwhile , researchers have attempted to mimic several plasticity measurements observed in biological synapses in nanoelectronic devices like phase change memories [CITE] , [MATH] memristors [CITE] and spintronic devices [CITE] , etc . however , majority of the research have foc"
+              },
+              {
+                "rank": 2,
+                "id": "sentence_packed-7-12",
+                "doc_id": 7,
+                "relevant": true,
+                "vector_distance": 0.3545,
+                "rerank_score": null,
+                "snippet": "while the `` forgetting '' phenomena occurs at a fast rate in the stm , information can be stored for a much longer duration in the ltm . in order to mimic such volatile synaptic plasticity mechanisms , a nanoelectronic device is required that is able to undergo meta - stable res"
+              },
+              {
+                "rank": 3,
+                "id": "sentence_packed-7-4",
+                "doc_id": 7,
+                "relevant": false,
+                "vector_distance": 0.3595,
+                "rerank_score": null,
+                "snippet": "while the power required to simulate the human brain will rise significantly as we proceed along the hierarchy in the animal kingdom , actual power consumption in the mammalian brain is just a few tens of watts . in a neuromorphic computing platform , synapses form the pathways b"
+              },
+              {
+                "rank": 4,
+                "id": "sentence_packed-7-13",
+                "doc_id": 7,
+                "relevant": false,
+                "vector_distance": 0.3657,
+                "rerank_score": null,
+                "snippet": "in the next section , we will describe the mapping of the magnetization dynamics of a nanomagnet to such volatile synaptic plasticity mechanisms observed in the brain . let us first describe the device structure and principle of operation of an mtj [CITE] as shown in fig . [ draw"
+              },
+              {
+                "rank": 5,
+                "id": "sentence_packed-7-27",
+                "doc_id": 7,
+                "relevant": false,
+                "vector_distance": 0.3885,
+                "rerank_score": null,
+                "snippet": "however , information gets transferred to ltm progressively for [MATH] . it is worth noting here , that the same amount of flux is transmitted through the mtj in both cases . the simulation not only provides a visual depiction of the temporal evolution of a large array of mtj con"
+              }
+            ]
+          },
+          "reranked": {
+            "metrics": {
+              "precision_at_5": 0.4,
+              "recall_at_5": 0.4,
+              "mrr": 1.0,
+              "doc_precision_at_5": 1.0,
+              "doc_recall_at_5": 1.0,
+              "doc_mrr": 1.0,
+              "n_relevant_in_index": 5
+            },
+            "top": [
+              {
+                "rank": 1,
+                "id": "sentence_packed-7-12",
+                "doc_id": 7,
+                "relevant": true,
+                "vector_distance": 0.3545,
+                "rerank_score": -0.7944,
+                "snippet": "while the `` forgetting '' phenomena occurs at a fast rate in the stm , information can be stored for a much longer duration in the ltm . in order to mimic such volatile synaptic plasticity mechanisms , a nanoelectronic device is required that is able to undergo meta - stable res"
+              },
+              {
+                "rank": 2,
+                "id": "sentence_packed-7-4",
+                "doc_id": 7,
+                "relevant": false,
+                "vector_distance": 0.3595,
+                "rerank_score": -2.7225,
+                "snippet": "while the power required to simulate the human brain will rise significantly as we proceed along the hierarchy in the animal kingdom , actual power consumption in the mammalian brain is just a few tens of watts . in a neuromorphic computing platform , synapses form the pathways b"
+              },
+              {
+                "rank": 3,
+                "id": "sentence_packed-7-5",
+                "doc_id": 7,
+                "relevant": false,
+                "vector_distance": 0.3361,
+                "rerank_score": -3.3462,
+                "snippet": "meanwhile , researchers have attempted to mimic several plasticity measurements observed in biological synapses in nanoelectronic devices like phase change memories [CITE] , [MATH] memristors [CITE] and spintronic devices [CITE] , etc . however , majority of the research have foc"
+              },
+              {
+                "rank": 4,
+                "id": "sentence_packed-7-7",
+                "doc_id": 7,
+                "relevant": true,
+                "vector_distance": 0.4235,
+                "rerank_score": -3.5021,
+                "snippet": "as a matter of fact , neuroscience studies performed in [CITE] have demonstrated that synapses exhibit an inherent learning ability where they undergo volatile plasticity changes and ultimately undergo long - term plasticity conditionally based on the frequency of the incoming ac"
+              },
+              {
+                "rank": 5,
+                "id": "sentence_packed-7-8",
+                "doc_id": 7,
+                "relevant": false,
+                "vector_distance": 0.3987,
+                "rerank_score": -3.6357,
+                "snippet": "such volatile or meta - stable synaptic plasticity mechanisms can lead to neuromorphic architectures where the synaptic memory can adapt itself to a changing environment since sections of the memory that have been not receiving frequent stimulus can be now erased and utilized to "
+              }
+            ]
+          }
+        }
+      }
+    },
+    "metrics": {
+      "fixed_window/without_memory/vector": {
+        "precision_at_5": 0.0,
+        "recall_at_5": 0.0,
+        "mrr": 0.0,
+        "doc_precision_at_5": 0.0,
+        "doc_recall_at_5": 0.0,
+        "doc_mrr": 0.07692307692307693,
+        "n_relevant_in_index": 5
+      },
+      "fixed_window/without_memory/reranked": {
+        "precision_at_5": 0.0,
+        "recall_at_5": 0.0,
+        "mrr": 0.0,
+        "doc_precision_at_5": 0.2,
+        "doc_recall_at_5": 1.0,
+        "doc_mrr": 1.0,
+        "n_relevant_in_index": 5
+      },
+      "fixed_window/with_memory/vector": {
+        "precision_at_5": 0.4,
+        "recall_at_5": 0.4,
+        "mrr": 0.5,
+        "doc_precision_at_5": 1.0,
+        "doc_recall_at_5": 1.0,
+        "doc_mrr": 1.0,
+        "n_relevant_in_index": 5
+      },
+      "fixed_window/with_memory/reranked": {
+        "precision_at_5": 0.6,
+        "recall_at_5": 0.6,
+        "mrr": 0.5,
+        "doc_precision_at_5": 1.0,
+        "doc_recall_at_5": 1.0,
+        "doc_mrr": 1.0,
+        "n_relevant_in_index": 5
+      },
+      "sentence_packed/without_memory/vector": {
+        "precision_at_5": 0.0,
+        "recall_at_5": 0.0,
+        "mrr": 0.05,
+        "doc_precision_at_5": 0.0,
+        "doc_recall_at_5": 0.0,
+        "doc_mrr": 0.05,
+        "n_relevant_in_index": 5
+      },
+      "sentence_packed/without_memory/reranked": {
+        "precision_at_5": 0.2,
+        "recall_at_5": 0.2,
+        "mrr": 1.0,
+        "doc_precision_at_5": 0.2,
+        "doc_recall_at_5": 1.0,
+        "doc_mrr": 1.0,
+        "n_relevant_in_index": 5
+      },
+      "sentence_packed/with_memory/vector": {
+        "precision_at_5": 0.2,
+        "recall_at_5": 0.2,
+        "mrr": 0.5,
+        "doc_precision_at_5": 1.0,
+        "doc_recall_at_5": 1.0,
+        "doc_mrr": 1.0,
+        "n_relevant_in_index": 5
+      },
+      "sentence_packed/with_memory/reranked": {
+        "precision_at_5": 0.4,
+        "recall_at_5": 0.4,
+        "mrr": 1.0,
+        "doc_precision_at_5": 1.0,
+        "doc_recall_at_5": 1.0,
+        "doc_mrr": 1.0,
+        "n_relevant_in_index": 5
+      }
+    }
+  }
+}
